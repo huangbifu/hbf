@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/activity_search"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/backgroud_color"
+    android:orientation="vertical">
+
+    <com.cnsunrun.commonui.widget.titlebar.TitleBar
+        android:id="@+id/titleBar"
+        style="@style/BackTitleBarStyle"
+        app:leftIcon="@drawable/home_notice_btn_black"
+        app:rightVisible="visible"
+        app:title="通讯录"
+        app:leftAsFinish="false"
+        app:rightIcon="@drawable/ic_common_addfriend_icon_normal_3x"
+        />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:background="@color/white"
+        android:layout_marginBottom="10dp"
+        android:layout_height="44dp">
+        <EditText
+            android:id="@+id/edit_search"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_alignBottom="@+id/titleBar"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/shape_search_border_bg"
+            android:drawableLeft="@drawable/ic_chat_search_input"
+            android:drawablePadding="4dp"
+            android:gravity="center_vertical"
+            android:hint="搜索"
+            android:imeOptions="actionSearch"
+            android:inputType="text"
+            android:paddingLeft="8dp"
+            android:textColor="@color/text_color_666"
+            android:textColorHint="@color/text4"
+            android:textSize="13sp" />
+    </LinearLayout>
+
+<com.sunrun.sunrunframwork.view.ItemView
+    android:layout_width="match_parent"
+    app:leftTVText="新朋友"
+    android:id="@+id/itemNewFriends"
+    app:leftTVTextDrawLeftImg="@drawable/ic_game_friend_icon_3x"
+    android:layout_height="44dp">
+    <com.flyco.tablayout.widget.MsgView
+        android:id="@+id/msgNumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical|right"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="35dp"
+        android:gravity="center"
+        android:minHeight="17dp"
+        android:minWidth="17dp"
+        android:paddingLeft="3dp"
+        android:paddingRight="3dp"
+        android:text="0"
+        android:visibility="gone"
+        android:textColor="@color/white"
+        android:textSize="12sp"
+        app:mv_backgroundColor="@color/wrong_orange_color_"
+        app:mv_isRadiusHalfHeight="true"
+
+        />
+</com.sunrun.sunrunframwork.view.ItemView>
+    <View
+        style="@style/limit_line"/>
+    <com.sunrun.sunrunframwork.view.ItemView
+        android:layout_width="match_parent"
+        app:leftTVText="群聊"
+        android:id="@+id/itemGroups"
+        android:visibility="gone"
+        app:leftTVTextDrawLeftImg="@drawable/ic_game_group_icon_3x"
+        android:layout_height="44dp"/>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:overScrollMode="never"
+            android:scrollbars="none" />
+        <TextView
+            android:id="@+id/txtTip"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_centerInParent="true"
+            android:background="@color/black_lucency_3c"
+            android:gravity="center"
+            android:text="A"
+            android:textColor="@color/white"
+            android:textSize="25dp"
+            android:visibility="gone" />
+        <com.cnsunrun.common.widget.SmallSideBar
+            android:layout_width="18dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="10dp"
+            android:id="@+id/sideBar"
+            android:layout_alignParentRight="true"
+            android:layout_height="wrap_content" />
+    </RelativeLayout>
+</LinearLayout>

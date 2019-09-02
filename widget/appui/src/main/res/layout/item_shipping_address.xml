@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="10dp"
+    android:background="@drawable/stroke_top_and_bottom_line_drawable"
+    android:divider="@drawable/divider_inner_drawable_nopadding"
+    android:orientation="vertical"
+    android:showDividers="middle">
+
+    <include layout="@layout/item_shipping_address_only" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="36dp"
+        android:orientation="horizontal"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:text="默认"
+            android:textColor="#de031f"
+            android:textSize="14sp" />
+
+        <com.cnsunrun.commonui.widget.button.RoundButton xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:layout_width="60dp"
+            android:layout_height="30dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:clickable="true"
+            android:text="选择"
+            android:textColor="#fff"
+            app:btnCornerRadius="5dp"
+            app:btnSolidColor="#f00" />
+    </RelativeLayout>
+
+</LinearLayout>

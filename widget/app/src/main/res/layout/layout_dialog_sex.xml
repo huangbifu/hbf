@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/out"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="250dp"
+        android:layout_height="100dp"
+        android:layout_gravity="center"
+        android:background="@drawable/shap_bg_nocolor"
+        android:orientation="vertical">
+
+        <TextView
+            android:text="男"
+            android:id="@+id/tv_boy"
+            android:layout_width="match_parent"
+            android:gravity="center"
+            android:layout_height="0dp"
+            android:textSize="18sp"
+            android:textColor="@color/text_color_666"
+            android:layout_weight="1"/>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/com_dark_bg_color"/>
+        <TextView
+            android:text="女"
+            android:id="@+id/tv_girl"
+            android:layout_width="match_parent"
+            android:gravity="center"
+            android:textSize="18sp"
+            android:textColor="@color/text_color_666"
+            android:layout_height="0dp"
+            android:layout_weight="1"/>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:visibility="gone"
+            android:background="@color/com_dark_bg_color"/>
+        <TextView
+            android:text="保密"
+            android:id="@+id/tv_secret"
+            android:layout_width="match_parent"
+            android:textSize="18sp"
+            android:textColor="@color/text_color_666"
+            android:gravity="center"
+            android:layout_height="0dp"
+            android:visibility="gone"
+            android:layout_weight="1"/>
+
+
+
+
+
+
+    </LinearLayout>
+
+</LinearLayout>

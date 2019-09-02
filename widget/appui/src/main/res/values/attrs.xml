@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="EditView">
+        <attr name="hintText" format="string" />
+        <attr name="text" format="string" />
+        <attr name="maxLength" format="integer" />
+        <attr name="editable" format="boolean" />
+        <attr name="leftImg" format="reference" />
+        <attr name="rightImg" format="reference" />
+        <attr name="inputType" format="enum">
+            <enum name="password" value="129" />
+            <enum name="text" value="1" />
+            <enum name="number" value="2" />
+        </attr>
+        <attr name="rightAction" format="enum">
+            <enum name="password" value="0" />
+            <enum name="clearAll" value="1" />
+        </attr>
+    </declare-styleable>
+    <declare-styleable name="SuperEditText">
+        <attr name="leftIcon" />
+        <attr name="rightIcon" />
+        <attr name="rightIconAction" format="enum">
+            <enum name="password" value="0" />
+            <enum name="clearAll" value="1" />
+        </attr>
+        <attr name="showedIcon" format="reference" />
+        <attr name="hindeIcon" format="reference" />
+    </declare-styleable>
+
+
+    <!--圆角图片-->
+    <declare-styleable name="cusRoundImageView">
+        <attr name="borderRadius" />
+        <attr name="type" />
+    </declare-styleable>
+    <attr name="borderRadius" format="dimension" />
+    <attr name="type">
+        <enum name="circle" value="0" />
+        <enum name="round" value="1" />
+    </attr>
+    <declare-styleable name="MomentPicView">
+        <attr name="mpvHorizontalSpace" format="dimension" />
+        <attr name="mpvVerticalSpace" format="dimension" />
+        <attr name="mpvRadius" format="dimension" />
+        <attr name="mpvRatio" format="float" />
+        <attr name="mpvColumns" format="integer" />
+        <attr name="mpvPrevNum" format="integer" />
+        <attr name="mpvTest" format="boolean" />
+        <attr name="mpvShowRule" format="enum">
+            <enum name="RULE_123" value="1" />
+            <enum name="RULE_13" value="2" />
+            <enum name="RULE_3" value="3" />
+            <enum name="RULE_1" value="4" />
+        </attr>
+        <attr name="mpvAddIcon" format="reference" />
+        <attr name="mpvAddIconInStart" format="boolean" />
+        <attr name="mpvDelIcon" format="reference" />
+        <attr name="mpvMaxImg" format="integer" />
+    </declare-styleable>
+    <!--自定义星星-->
+    <declare-styleable name="NormalRatingBar">
+        <!--尺寸值-->
+        <attr name="starImageSize" format="dimension" />
+        <!--星星间距-->
+        <attr name="starPadding" format="dimension" />
+        <!--星星总数-->
+        <attr name="starCount" format="integer" />
+        <!--空白的星星资源文件值-->
+        <attr name="starEmpty" format="reference" />
+        <!--满星资源文件值-->
+        <attr name="starFill" format="reference" />
+        <!--半星资源文件值-->
+        <attr name="starHalf" format="reference" />
+        <!--是否可点击boolean值-->
+        <attr name="clickable" format="boolean" />
+        <!--当前进度float值-->
+        <attr name="starStep" format="float" />
+        <!--每次进度方式的值，整星还是半星-->
+        <attr name="stepSize">
+            <enum name="Half" value="0" />
+            <enum name="Full" value="1" />
+        </attr>
+    </declare-styleable>
+    <!--自定义星星-->
+    <declare-styleable name="StepRatingBar">
+        <!--尺寸值-->
+        <attr name="ratingStarSize" format="dimension" />
+        <!--星星间距-->
+        <attr name="ratingStarPadding" format="dimension" />
+        <!--空白的星星资源文件值-->
+        <attr name="ratingStarEmpty" format="reference" />
+        <!--满星资源文件值-->
+        <attr name="ratingStarFill" format="reference" />
+    </declare-styleable>
+</resources>

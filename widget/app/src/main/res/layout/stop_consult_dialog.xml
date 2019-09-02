@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    >
+
+    <LinearLayout
+        android:layout_width="@dimen/x530"
+        android:layout_height="@dimen/x320"
+        android:background="@color/white"
+        android:orientation="vertical"
+        >
+
+        <TextView
+            android:id="@+id/stop_tv_consult"
+            android:layout_gravity="center_horizontal"
+            android:textSize="@dimen/x26"
+            android:text="结束咨询之后该订单则会失效,请确认"
+            android:textColor="@color/quanxian_tv_color"
+            android:layout_marginTop="@dimen/x86"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <LinearLayout
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <Button
+                android:layout_marginTop="@dimen/x86"
+                android:id="@+id/stop_btn_consult_cancel"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:background="@drawable/stop_consult_cancel"
+                android:text="取消"
+                android:textColor="@color/white"
+                android:textSize="18sp" />
+            <Button
+                android:layout_marginLeft="@dimen/x10"
+                android:layout_marginTop="@dimen/x86"
+                android:id="@+id/stop_btn_consult_confirm"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:background="@drawable/stop_consult_bg"
+                android:text="确定"
+                android:textColor="@color/white"
+                android:textSize="18sp" />
+
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

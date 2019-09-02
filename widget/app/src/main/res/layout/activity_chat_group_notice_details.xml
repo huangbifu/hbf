@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <com.cnsunrun.commonui.widget.titlebar.TitleBar
+        android:id="@+id/titleBar"
+        style="@style/BackTitleBarStyle"
+        app:title="群组详情" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:background="@color/white"
+        android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="10dp"
+            android:gravity="center_vertical"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_message_title"
+                style="@style/textView_style_15sp"
+                android:text="进群公告"
+                android:textColor="@color/text_color_333" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:layout_height="wrap_content">
+            <TextView
+                style="@style/textView_style_14sp"
+                android:layout_marginTop="5dp"
+                android:text="管理员\t\t"
+                android:textColor="@color/text_color_999"
+                android:textSize="11sp" />
+            <TextView
+                style="@style/textView_style_14sp"
+                android:layout_marginTop="5dp"
+                android:id="@+id/tvMessageTime"
+                android:text="2017/10/20 12:30:23"
+                android:textColor="@color/text_color_999"
+                android:textSize="11sp" />
+            </LinearLayout>
+        </LinearLayout>
+
+
+        <View
+            style="@style/limit_line"
+            android:layout_marginLeft="10dp"
+            android:layout_alignParentBottom="true" />
+
+        <TextView
+            android:padding="10dp"
+            android:lineSpacingMultiplier="1.5"
+            android:id="@+id/tv_message_content"
+            style="@style/textView_style_14sp"
+            android:text="尊敬的业主:\n为配合济南市鲁能领秀城东村加压站供水管道工程,本小区将要停水,请做好准备"
+            android:textColor="@color/text_color_333" />
+    </LinearLayout>
+    </ScrollView>
+</LinearLayout>

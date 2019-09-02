@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/backgroud_color"
+    android:orientation="vertical">
+
+    <com.cnsunrun.commonui.widget.titlebar.TitleBar
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/titlebar_height"
+        app:leftAsFinish="true"
+        app:leftText="返回"
+        app:leftVisible="visible"
+        app:title="收货信息"
+        app:titleColor="#ff3300" />
+
+    <include layout="@layout/view_refreshable_recyclerview" />
+
+    <com.cnsunrun.commonui.widget.button.RoundButton
+        android:layout_width="match_parent"
+        android:layout_height="49dp"
+        android:clickable="true"
+        android:gravity="center"
+        android:text="添加"
+        android:textColor="#fff"
+        android:textSize="15sp"
+        app:btnSolidColor="#f00" />
+</LinearLayout>

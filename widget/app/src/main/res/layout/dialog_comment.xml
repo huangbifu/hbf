@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/layOut"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical" />
+
+    <com.cnsunrun.common.widget.BoxLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        app:box_Border="top"
+        app:box_BorderColor="@color/limit_line1"
+        app:box_BorderWidth="1dp"
+        app:box_Padding="10 12 10 12">
+        <EditText
+            android:id="@+id/editContent"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/shape_chat_comment_bg"
+            android:gravity="left|center_vertical"
+            android:hint="说点什么..."
+            android:minLines="1"
+            android:minHeight="36dp"
+            android:maxLines="3"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:text=""
+            android:textColorHint="@color/text5" />
+
+        <com.cnsunrun.commonui.widget.roundwidget.QMUIRoundButton
+            android:id="@+id/btnSend"
+            style="@style/smallBtn"
+            android:layout_marginLeft="10dp"
+            android:enabled="false"
+            android:text="发送" />
+    </com.cnsunrun.common.widget.BoxLayout>
+</LinearLayout>

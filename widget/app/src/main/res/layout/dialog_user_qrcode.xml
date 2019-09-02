@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:clickable="true"
+        android:layout_margin="43dp"
+        android:background="@drawable/shap_dialog_bg"
+        android:orientation="vertical"
+        >
+
+        <com.cnsunrun.common.widget.BoxLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:box_Padding="10 10 10 0">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/imgUserIcon"
+                android:layout_width="55dp"
+                android:layout_height="55dp"
+                android:layout_marginRight="10dp"
+                android:src="@color/text5"
+                android:scaleType="centerCrop" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/txtUserName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawablePadding="2dp"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:textColor="@color/text1"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/txtInfo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:text="昵称: "
+                    android:textColor="@color/text3"
+                    android:textSize="11sp" />
+
+                <TextView
+                    android:id="@+id/txtSignature"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:text="ID: "
+                    android:textColor="@color/text3"
+                    android:textSize="11sp" />
+            </LinearLayout>
+
+
+        </com.cnsunrun.common.widget.BoxLayout>
+
+        <ImageView
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="15dp"
+            android:layout_marginTop="20dp"
+            android:src="@color/text5"
+            android:id="@+id/imgQrCode"
+            />
+
+        <View
+            style="@style/limit_line"
+            
+            />
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="44dp">
+
+
+            <TextView
+                android:id="@+id/tvScanQrcode"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_toRightOf="@+id/center_line"
+                android:text="扫码二维码"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:textColor="#fe481e"
+                />
+
+            <View
+                android:id="@+id/center_line"
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:layout_centerHorizontal="true"
+                android:background="#f2f2f2"
+                />
+            <TextView
+                android:id="@+id/tvSave"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_toLeftOf="@+id/center_line"
+                android:text="保存到手机"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:textColor="@color/text2"
+                />
+
+        </RelativeLayout>
+    </LinearLayout>
+
+</LinearLayout>

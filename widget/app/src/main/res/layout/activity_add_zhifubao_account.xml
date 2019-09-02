@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f8f8f8"
+    android:orientation="vertical">
+
+    <com.cnsunrun.common.widget.titlebar.TitleBar
+        android:id="@+id/titleBar"
+        style="@style/NewWhiteBackTitleBarStyle"
+        app:backgroundColor="@color/white"
+        app:bottomDividerHeight="1dp"
+        app:title="添加支付宝账户" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingBottom="10dp"
+        android:paddingLeft="10dp"
+        android:paddingTop="15dp"
+        android:text="请绑定本人的支付宝"
+        android:textColor="@color/text_color_999"
+        android:textSize="12sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:text="姓名"
+            android:textColor="@color/text_color_333"
+            android:textSize="14sp" />
+
+        <EditText
+            android:id="@+id/etName"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="5dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="5dp"
+            android:background="@null"
+            android:gravity="right|center_vertical"
+            android:hint="请输入姓名"
+            android:textColor="@color/text_color_666"
+            android:textColorHint="@color/text_color_999"
+            android:textSize="14sp" />
+    </LinearLayout>
+
+    <View style="@style/divide_line_1px_e9e9e9" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:text="支付宝账号"
+            android:textColor="@color/text_color_333"
+            android:textSize="14sp" />
+
+        <EditText
+            android:id="@+id/etAccount"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="5dp"
+            android:layout_marginTop="5dp"
+            android:background="@null"
+            android:gravity="right|center_vertical"
+            android:hint="请输入支付宝账号"
+            android:textColor="@color/text_color_666"
+            android:textColorHint="@color/text_color_999"
+            android:textSize="14sp"
+            android:singleLine="true"/>
+    </LinearLayout>
+
+    <View style="@style/divide_line_1px_e9e9e9" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:text="验证码"
+            android:textColor="@color/text_color_333"
+            android:textSize="14sp" />
+
+        <EditText
+            android:id="@+id/etCode"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="5dp"
+            android:layout_marginTop="5dp"
+            android:background="@null"
+            android:gravity="right|center_vertical"
+            android:hint="请输入验证码"
+            android:textColor="@color/text_color_666"
+            android:textColorHint="@color/text_color_999"
+            android:textSize="14sp"
+            android:inputType="number"
+            android:maxLength="6"
+            android:singleLine="true"/>
+        <TextView
+            android:id="@+id/get_verification_code"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:gravity="center"
+            android:layout_marginEnd="10dp"
+            android:layout_alignParentEnd="true"
+            android:text="获取验证码"
+            android:textColor="@color/com_color"
+            android:autoLink="all"
+            android:textSize="15sp" />
+    </LinearLayout>
+
+    <View style="@style/divide_line_1px_e9e9e9" />
+
+    <com.cnsunrun.commonui.widget.roundwidget.QMUIRoundButton
+        android:id="@+id/btnBind"
+        style="@style/submitBtnR1"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="20dp"
+        android:text="绑定"
+        android:textSize="18sp"
+        app:qmui_backgroundColor="@drawable/submit_btn_bg_select_new" />
+
+</LinearLayout>

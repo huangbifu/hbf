@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_login_four"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f8f8f8"
+    android:orientation="vertical">
+
+    <com.cnsunrun.commonui.widget.titlebar.TitleBar
+        android:id="@+id/titleBar"
+        style="@style/NewWhiteBackTitleBarStyle"
+        app:title="修改登录密码" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="20dp"
+        android:orientation="vertical">
+
+        <com.cnsunrun.commonui.widget.edittext.EditView
+            android:id="@+id/oldPassword"
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:background="@drawable/shape_white_bg"
+            android:textSize="15sp"
+            app:hintText="输入旧密码"
+            app:inputType="password"
+            app:rightAction="password"
+            app:maxLength="18"
+            android:layout_marginBottom="20dp"
+            app:rightImg="@drawable/login_icon_invisible_nor" />
+
+        <com.cnsunrun.commonui.widget.edittext.EditView
+            android:id="@+id/newPassword"
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:background="@drawable/shape_white_bg"
+            android:textSize="15sp"
+            app:hintText="输入新密码"
+            app:inputType="password"
+            app:maxLength="18"
+            app:rightAction="password"
+            app:rightImg="@drawable/login_icon_invisible_nor" />
+
+
+        <com.cnsunrun.commonui.widget.edittext.EditView
+            android:id="@+id/secondNewPassword"
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/shape_white_bg"
+            android:textSize="15sp"
+            app:hintText="再次输入新密码"
+            app:inputType="password"
+            app:maxLength="18"
+            app:rightAction="password"
+            app:rightImg="@drawable/login_icon_invisible_nor" />
+    </LinearLayout>
+
+
+    <com.cnsunrun.commonui.widget.roundwidget.QMUIRoundButton
+        android:id="@+id/btnConfirm"
+        style="@style/submitBtnR1"
+        android:layout_margin="20dp"
+        android:text="确认修改"
+        app:qmui_backgroundColor="@drawable/submit_btn_bg_select_new"/>
+
+
+</LinearLayout>

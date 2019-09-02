@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/backgroud_color"
+    android:orientation="vertical">
+
+    <com.cnsunrun.commonui.widget.titlebar.TitleBar
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/titlebar_height"
+        app:leftAsFinish="true"
+        app:leftText="返回"
+        app:leftVisible="visible"
+        app:title="关于我们"
+        app:titleColor="#de031f" />
+
+    <com.makeramen.roundedimageview.RoundedImageView
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_margin="30dp"
+        android:src="@drawable/ic_good_3x"
+        app:riv_border_color="@color/divide_line_out"
+        app:riv_mutate_background="true"
+        app:riv_oval="true" />
+
+    <com.allen.library.CommonTextView
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        app:cBackgroundColor="#fff"
+        app:cCenterTextColor="@color/hint_text_color"
+        app:cCenterTextSize="14sp"
+        app:cCenterTextString="V1.0"
+        app:cCenterTextViewGravity="left_center"
+        app:cDividerLineColor="@color/divide_line_out"
+        app:cDividerLineHeight="1dp"
+        app:cIsCenterAlignLeft="true"
+        app:cLeftTextColor="@color/main_text_color"
+        app:cLeftTextSize="14sp"
+        app:cLeftTextString="版本号"
+        app:cShowDividerLineType="top" />
+
+    <com.allen.library.CommonTextView
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        app:cBackgroundColor="#fff"
+        app:cBottomDividerLineMarginLeft="10dp"
+        app:cCenterTextColor="@color/hint_text_color"
+        app:cCenterTextSize="14sp"
+        app:cCenterTextString="18000000000"
+        app:cCenterTextViewGravity="left_center"
+        app:cDividerLineColor="@color/divide_line_in"
+        app:cDividerLineHeight="1dp"
+        app:cIsCenterAlignLeft="true"
+        app:cLeftTextColor="@color/main_text_color"
+        app:cLeftTextSize="14sp"
+        app:cLeftTextString="联系电话"
+        app:cShowDividerLineType="both"
+        app:cTopDividerLineMarginLeft="10dp" />
+
+    <com.allen.library.CommonTextView
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        app:cBackgroundColor="#fff"
+        app:cDividerLineColor="@color/divide_line_out"
+        app:cDividerLineHeight="1dp"
+        app:cIsCenterAlignLeft="true"
+        app:cLeftTextColor="@color/main_text_color"
+        app:cLeftTextSize="14sp"
+        app:cLeftTextString="更多信息"
+        app:cRightIconResForDrawableRight="@drawable/ic_to_more_2x"
+        app:cShowDividerLineType="bottom" />
+</LinearLayout>

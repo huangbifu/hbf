@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/selec_itemview"
+    android:orientation="vertical">
+
+    <com.cnsunrun.common.widget.BoxLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        app:box_Padding="10 13 10 12">
+
+        <com.cnsunrun.common.widget.BoxLayout
+            android:layout_width="53dp"
+            android:layout_height="53dp"
+            android:layout_marginRight="10dp"
+            android:orientation="vertical"
+            app:box_Padding="5"
+            app:box_Border="both"
+            android:gravity="center"
+            app:box_BorderColor="@color/limit_line1"
+            app:box_BorderWidth="1dp">
+
+            <ImageView
+                android:id="@+id/imgGroupIcon"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:src="#ccc"
+                android:background="#ccc"
+                android:scaleType="centerCrop" />
+        </com.cnsunrun.common.widget.BoxLayout>
+
+
+        <TextView
+            android:id="@+id/txtGroupName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:text="花园小区宠物群"
+            android:textColor="@color/text1"
+            android:textSize="17sp" />
+
+    </com.cnsunrun.common.widget.BoxLayout>
+
+
+    <View
+        style="@style/limit_line"
+        android:layout_marginRight="10dp" />
+</LinearLayout>

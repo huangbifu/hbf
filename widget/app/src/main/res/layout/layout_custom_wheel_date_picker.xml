@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="horizontal">
+
+    <com.aigestudio.wheelpicker.widgets.WheelYearPicker
+        android:id="@+id/wheel_date_picker_year"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:wheel_indicator="true"
+        app:wheel_indicator_color="@color/limit_line1"
+        app:wheel_indicator_size="1dp"
+        app:wheel_visible_item_count="5" />
+
+    <TextView
+        android:id="@+id/wheel_date_picker_year_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:text="年"
+        android:textColor="@color/text3" />
+
+    <com.aigestudio.wheelpicker.widgets.WheelMonthPicker
+        android:id="@+id/wheel_date_picker_month"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:wheel_indicator="true"
+        app:wheel_indicator_color="@color/limit_line1"
+        app:wheel_indicator_size="1dp"
+        app:wheel_visible_item_count="5" />
+
+    <TextView
+        android:id="@+id/wheel_date_picker_month_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:text="月"
+        android:textColor="@color/text3" />
+
+    <com.aigestudio.wheelpicker.widgets.WheelDayPicker
+        android:id="@+id/wheel_date_picker_day"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:wheel_indicator="true"
+        app:wheel_indicator_color="@color/limit_line1"
+        app:wheel_indicator_size="1dp"
+        app:wheel_visible_item_count="5" />
+
+    <TextView
+        android:id="@+id/wheel_date_picker_day_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:text="日"
+        android:textColor="@color/text3" />
+
+</LinearLayout>

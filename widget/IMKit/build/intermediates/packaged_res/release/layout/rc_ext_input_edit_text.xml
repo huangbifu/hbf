@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_centerVertical="true"
+    android:orientation="horizontal">
+
+    <RelativeLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:layout_marginLeft="2dp"
+        android:layout_weight="1"
+        android:background="@drawable/rc_edit_text_background_selector2"
+        android:gravity="center_vertical">
+
+        <EditText
+            android:id="@+id/rc_edit_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center_vertical"
+            android:paddingLeft="10dp"
+            android:gravity="center_vertical|left"
+            android:hint="禁言中"
+            android:textColorHint="#CCC"
+            android:background="@null"
+            android:maxLines="4"
+            android:focusable="false"
+            android:enabled="false"
+            android:maxLength="0"
+            android:visibility="gone"
+            android:layout_toLeftOf="@+id/rc_emoticon_toggle"
+            android:textSize="14sp"/>
+        <TextView
+            android:id="@+id/rc_edit_text2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center_vertical"
+            android:paddingLeft="10dp"
+            android:gravity="center_vertical|left"
+            android:hint="禁言中"
+            android:textColorHint="#CCC"
+            android:background="@null"
+            android:maxLines="4"
+            android:focusable="false"
+            android:enabled="false"
+            android:maxLength="0"
+            android:layout_toLeftOf="@+id/rc_emoticon_toggle"
+            android:textSize="14sp"/>
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/rc_emotion_toggle_selector"/>
+    </RelativeLayout>
+
+
+
+    <FrameLayout
+        android:id="@+id/rc_send_toggle"
+        android:layout_width="44dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_marginLeft="10dp"
+        android:background="@drawable/rc_send_toggle_selector"
+        android:visibility="gone"
+     >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:text="@string/rc_ext_send"
+            android:textColor="#ffffff"
+            android:textSize="14sp"/>
+    </FrameLayout>
+</LinearLayout>

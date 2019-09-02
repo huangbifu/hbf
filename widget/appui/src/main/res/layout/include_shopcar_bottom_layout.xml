@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_alignParentBottom="true"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <View style="@style/divide_line_1px_e9e9e9" />
+
+
+    <LinearLayout
+        android:id="@+id/ll_clearing_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="49dp"
+        android:orientation="horizontal"
+        android:visibility="visible">
+
+        <LinearLayout
+            android:id="@+id/ll_all_check_goods"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="10dp"
+            android:orientation="horizontal">
+
+            <CheckBox
+                android:id="@+id/cb_clearing_goods"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:background="@drawable/select_shopcar_cbbg"
+                android:button="@null" />
+
+            <TextView
+                style="@style/textView_style_14sp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="5dp"
+                android:text="全选"
+                android:textColor="@color/text_color_333"
+                android:textSize="15sp" />
+        </LinearLayout>
+
+        <TextView
+            style="@style/textView_style_14sp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="20dp"
+            android:text="合计:"
+            android:textColor="@color/text_color_333"
+            android:textSize="15sp" />
+
+        <TextView
+            style="@style/textView_style_14sp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="10dp"
+            android:text="¥"
+            android:textColor="@color/red_color"
+            android:textSize="10sp" />
+
+        <TextView
+            android:id="@+id/tv_tot_up_money"
+            style="@style/textView_style_14sp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="3dp"
+            android:text="12000.58"
+            android:textColor="@color/red_color"
+            android:textSize="17sp" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1" />
+
+        <TextView
+            android:id="@+id/tv_clearing_goods"
+            android:layout_width="90dp"
+            android:layout_height="match_parent"
+            android:background="@color/red_color"
+            android:gravity="center"
+            android:text="结算(5)"
+            android:textColor="@color/white"
+            android:textSize="15sp" />
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_delete_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="49dp"
+        android:orientation="horizontal"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:id="@+id/ll_all_delete_check"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="10dp"
+            android:orientation="horizontal">
+
+            <CheckBox
+                android:id="@+id/cb_all_delete_check"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:background="@drawable/select_shopcar_cbbg"
+                android:button="@null" />
+
+            <TextView
+                style="@style/textView_style_14sp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="5dp"
+                android:text="全选"
+                android:textColor="@color/text_color_333"
+                android:textSize="15sp" />
+        </LinearLayout>
+
+
+        <TextView
+            android:id="@+id/tv_all_delete"
+            android:layout_width="90dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:background="@color/red_color"
+            android:gravity="center"
+            android:text="删除(0)"
+            android:textColor="@color/white"
+            android:textSize="15sp" />
+
+    </RelativeLayout>
+
+
+</LinearLayout>

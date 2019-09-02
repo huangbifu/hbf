@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/white_clickable_selector"
+    android:clickable="true"
+    android:paddingBottom="20dp"
+    android:paddingTop="20dp">
+
+    <TextView
+        android:id="@+id/txtName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:ellipsize="end"
+        android:lines="1"
+        android:maxEms="10"
+        android:text="张先生"
+        android:textColor="@color/main_text_color"
+        android:textSize="17sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/txtPhone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/txtName"
+        android:layout_marginLeft="10dp"
+        android:layout_toRightOf="@+id/txtName"
+        android:drawableLeft="@drawable/ic_callphoe_icon"
+        android:drawablePadding="5dp"
+        android:ellipsize="end"
+        android:gravity="bottom"
+        android:lines="1"
+        android:text="18086028888"
+        android:textColor="@color/main_text_color"
+        android:textSize="14sp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/txtName"
+        android:layout_below="@+id/txtName"
+        android:layout_marginTop="10dp"
+        android:drawableLeft="@drawable/ic_local_icon"
+        android:drawablePadding="5dp"
+        android:ellipsize="end"
+        android:lines="1"
+        android:maxEms="18"
+        android:text="湖北省武汉市洪山区光谷新都汇2705"
+        android:textColor="@color/hint_text_color"
+        android:textSize="14sp" />
+
+    <ImageView
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="10dp"
+        android:padding="5dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/ic_to_more_2x" />
+</RelativeLayout>

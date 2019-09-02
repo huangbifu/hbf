@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="10dp"
+    android:background="@drawable/stroke_top_and_bottom_line_drawable"
+    android:divider="@drawable/divider_inner_drawable"
+    android:orientation="vertical"
+    android:showDividers="middle">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:orientation="horizontal"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:ellipsize="end"
+            android:gravity="center_vertical|left"
+            android:lines="1"
+            android:text="订单号: 201705181343"
+            android:textSize="12sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:ellipsize="end"
+            android:gravity="center_vertical|right"
+            android:lines="1"
+            android:text="下单时间: 2017-05-18"
+            android:textSize="12sp" />
+    </LinearLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recvProductItem"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:orientation="horizontal"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/txtAmount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="合计: 1344.00"
+                android:textColor="#ff1313"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/txtFreight"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:text="含运费: 6.00"
+                android:textColor="@color/hint_text_color"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:orientation="horizontal">
+
+            <com.cnsunrun.commonui.widget.button.RoundButton
+                android:layout_width="90dp"
+                android:layout_height="36dp"
+                android:clickable="true"
+                android:text="去评价"
+                android:textColor="@color/hint_text_color"
+                android:textSize="15sp"
+                app:btnCornerRadius="5dp"
+                app:btnSolidColor="#fff"
+                app:btnStrokeColor="@color/hint_text_color"
+                app:btnStrokeWidth="1dp" />
+
+            <com.cnsunrun.commonui.widget.button.RoundButton
+                android:layout_width="90dp"
+                android:layout_height="36dp"
+                android:layout_marginLeft="10dp"
+                android:clickable="true"
+                android:text="去付款"
+                android:textColor="@color/white"
+                android:textSize="15sp"
+                app:btnCornerRadius="5dp"
+                app:btnSolidColor="#f00" />
+
+        </LinearLayout>
+    </RelativeLayout>
+</LinearLayout>

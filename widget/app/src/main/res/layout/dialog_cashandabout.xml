@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    >
+
+<LinearLayout
+    android:layout_width="@dimen/x530"
+    android:layout_height="@dimen/x320"
+    android:background="@color/white"
+    android:orientation="vertical"
+    >
+
+    <TextView
+        android:id="@+id/cash_memry"
+        android:layout_gravity="center_horizontal"
+        android:textSize="@dimen/x32"
+        android:text="已经清除3.68M缓存"
+        android:textColor="@color/quanxian_tv_color"
+        android:layout_marginTop="@dimen/x86"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <Button
+        android:layout_marginTop="@dimen/x86"
+        android:id="@+id/cash_submit"
+        style="@style/submitBtn"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:text="确定"
+        android:textColor="@color/white"
+        android:textSize="18sp" />
+
+
+</LinearLayout>
+</LinearLayout>

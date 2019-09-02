@@ -1,0 +1,65 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+
+buildscript {
+    
+    repositories {
+        maven {
+            url 'https://maven.google.com'
+        }
+        jcenter()
+        mavenCentral()
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:3.1.2'
+//        classpath 'com.jakewharton:butterknife-gradle-plugin:8.5.1'
+    }
+}
+
+allprojects {
+    repositories {
+        maven { url "https://maven.google.com" }
+        maven { url "https://jitpack.io" }
+        jcenter()
+        mavenCentral()
+    }
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}
+
+/**
+ * 获取版本号,每次release包自动迭代
+ * @return
+ */
+def increasedVersionCode() {
+    def propFile = file('gradle.properties')
+    def Properties props = new Properties()
+    props.load(new FileInputStream(propFile))
+    // 读取gradle.properties文件中定义的VERSION_CODE属性
+    def code = props.getProperty('VERSION_CODE', "0").toInteger()
+    if (isRelease) {
+        code++
+        props['VERSION_CODE'] = code.toString()
+        // 将最新的versionCode写入gradle.properties文件中
+        props.store(propFile.newWriter(), null)
+    }
+    return code
+}
+// 通过taskName判断当前操作是否是在打release包
+def checkRelease() {
+    def runTasks = gradle.startParameter.taskNames
+    for (String task : runTasks) {
+        // 我这里认为执行“assemble”和非“debug”的任务就是执行“release”的任务
+        if (task.contains("assemble") && !task.contains("Debug")) {
+//            targetTask = task
+            return true
+        }
+    }
+    return false
+}
+
+ext { // 定义当前gradle文件的全局变量
+    isRelease = checkRelease()
+    increasedVersionCode=increasedVersionCode()
+}

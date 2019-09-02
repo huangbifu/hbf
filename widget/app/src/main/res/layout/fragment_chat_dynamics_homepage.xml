@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/activity_search"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <com.cnsunrun.commonui.widget.titlebar.TitleBar
+        android:id="@+id/titleBar"
+        style="@style/WhiteBackTitleBarStyle"
+        app:rightIcon="@drawable/ic_meeting_me_btn_add"
+        app:rightVisible="visible"
+        app:bottomDividerHeight="0dp"
+        app:leftAsFinish="false"
+        app:leftIcon="@null"
+        app:leftText="动态" />
+
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:paddingBottom="20dp"
+            android:layout_marginTop="50dp"
+            android:id="@+id/layEmpty"
+            android:layout_gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/iv_empty"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_empty_default" />
+
+            <TextView
+                android:id="@+id/tv_empty_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="暂无数据"
+                android:textColor="#666"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/tv_empty_tip_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="空提示"
+                android:textColor="@color/hint_text_color"
+                android:textSize="12sp"
+                android:visibility="gone" />
+        </LinearLayout>
+
+        <include layout="@layout/include_recyclerview_reflayout" />
+    </FrameLayout>
+    <com.cnsunrun.common.widget.BoxLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        app:box_Padding="10 12 10 12"
+        android:visibility="gone"
+        android:background="@color/white"
+        app:box_Border="top"
+        app:box_BorderColor="@color/limit_line1"
+        app:box_BorderWidth="1dp"
+        android:layout_height="wrap_content">
+        <EditText
+            android:id="@+id/editContent"
+            android:layout_width="match_parent"
+            android:minHeight="36dp"
+            android:layout_height="wrap_content"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:gravity="center_vertical|left"
+            android:hint="说点什么..."
+            android:imeOptions="actionSend"
+            android:textColorHint="@color/text5"
+            android:background="@drawable/shape_chat_comment_bg"
+            />
+    </com.cnsunrun.common.widget.BoxLayout>
+</LinearLayout>

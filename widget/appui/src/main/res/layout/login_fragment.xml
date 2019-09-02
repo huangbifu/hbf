@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/backgroud_color"
+    android:orientation="vertical">
+
+    <EditText
+        android:id="@+id/edit_user_name"
+        style="@style/edit_text_style"
+        android:layout_marginTop="5dp"
+        android:hint="NIHDUHAHSJN"
+        android:paddingLeft="10dp" />
+
+    <EditText
+        android:id="@+id/edit_user_password"
+        style="@style/edit_text_style"
+        android:layout_marginTop="10dp"
+        android:hint="请输入密码"
+        android:paddingLeft="10dp" />
+
+
+    <TextView
+        android:id="@+id/tv_login"
+        style="@style/bottom_button_style"
+        android:layout_marginTop="25dp"
+        android:text="登录" />
+
+    <TextView
+        android:id="@+id/tv_register"
+        style="@style/bottom_button_style"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/shape_white_bg"
+        android:text="立即注册"
+        android:textColor="@color/text_color_333" />
+</LinearLayout>

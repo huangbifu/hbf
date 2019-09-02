@@ -1,0 +1,29 @@
+package com.cnsunrun.pay.alipay;
+
+
+import com.cnsunrun.common.quest.BaseQuestConfig;
+import com.cnsunrun.common.util.ConstantValue;
+
+public class PayConfig {
+	public static final String ALI_NOTIFY_URL= BaseQuestConfig.HTTP_API+"User/Order/Callback/get_a_notify";
+	public static final int SDK_PAY_FLAG = 1;
+	// 商户PID
+	public static String PARTNER = "2088821608713376";
+	// 商户收款账号
+	public static String SELLER = "1030113200@qq.com";
+	public static String APPID = "2017110109666037";
+	// 商户私钥，pkcs8格式
+	public static String RSA2_PRIVATE ="MIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQCE2ZOyGQTe9gR2zvooK5LweUU0BfIlQpg7dcK6fKNtfTMC3Rx7emD//PmKsbNFemoOxNmq+wmiN7wCLkBfqZOn6akGbPU3XMvPS140WAq2u8fQFycRs6ifOBWDDTwmPqQeU3j6Yv/+vBoTD32izCqcCG/eLpD46Yq7v/65VAIL3oS2bhoEejd7y/FiHOKfnSSX5TCuMEJk/JZjR+OSTcXce9rGtrCfeUCFOjbOy0+kCC2XCpHueBthoRaI/7L3KkzBJJFuMTnL1DeaFfU/th1ml2t1tDWxyVKeirY7KTfl3V1Cy00mhdzwMr6XVkltKD/yKQ1UVq4l5ooc0RjQT7Q3AgMBAAECggEANBm4SLJzLJXDLm0BwltEZzbIIxzp2B8D4N3QHp7e4QOmy8q3bt2RyRMHMpN6QRc/HMeqrdmB77J380r8SAgTNlj2xuRYTvv/mi5upYyZtwxx0nQiCFkzGi4+kYTRQBZ0+se1vEyzJM3UVAFRPlVfqI3OgY41oMjGdddYKIp/uvNWkvM4Tq2CkjNo6lQEgglWNXB9K7AubsynU36NQp/O8D0loIAzclO68gAdtkA8io62Qj6YtcBaGhZkn3lpKzEIQDY4IKLaZKJBD2tXN3T7FK8R7XoXR97n8/EHc3uIa4CNY2P/b5LrDUu1L1TT3ndSKPL+xaqZYD/zZQVo71JagQKBgQDrX053eTaar2qm/3K5tb9MXV+QLK/UlinSiiHi0PeEKzcvwvWQLd80nF/eAUZ2am5kBvKYFdK2mX78fuh/p8JNyaytC8yAkYQ22Y859LePvKHW3RDn6brOzETgJbr4+d5jRIiwZ+pagoyNECbbvXt2++UpYnSTz/c+XyIV+MOUoQKBgQCQfiFV6Q1gSEla0pHJ3yacvOVChMFUQogKn/AHy6ARICAsvcZi5MqAMGCYSUQyvYrg65ShN0dFKdGs0ODUpC+5yjQ35yyyTO6N5Jk7Rmkflfo3Qzzsls+glA0HV6MThkBtRkJsvXfszWZsOUuk35eVThqJt728wpGSphHWeLFB1wKBgQCSFeE5vf3qHB3x8HJgWTGWUA3UCihHpbvndNx7Tn+RhNEHz9Vh21bB7JyDyf7V2FETvEwtoL3bn4F1bb8YHCM47IdEECKpWafZ80Y2DnEvwUAhf6vShPrxB09oX4KgrVUd/5dnBdgqvQRHOVMk54IN42HkQbthUp5+E8WwJWoegQKBgB8qlZYqRrBV5zyn3rpkX7e/JtRKPkkmcKGaDfQgf84x177O0FPUdblgtfUjGIq5R5NsPQrpGX5Znthf1Z8IKyMv8kN8oa9z2KDShhq6/UHK38W7wxBlFzPTu1uyE4LKmmr3lKxP0eZKB6WgViih8dhKmH7MGyjz7uJq374bGmDRAoGAFLtJTHotYYhwj9vOCQAqFv0LyOonqpKvaTLSywcs3SQMFiaq7M5CtGBDuKOA3TTQv+6BgBcaFj4COiZia/RQbdqgTCJktpfOi7Ed3cNVlAawbmO8wcAwfGOmucZ3l8jRrinpTryuA0ApQynVZSg05IxcqDv0IRD9e8T5I8J3/vU=";
+
+
+	public static String RSA_PRIVATE ="";
+
+	
+	public static final String APP_ID =  ConstantValue.WX_APP_ID;
+	// 商户号
+	public static final String MCH_ID = ConstantValue.PARTNER_ID;
+	public static final String WX_NOTIFY_URL= BaseQuestConfig.HTTP_API+"User/Order/Callback/get_w_notify";
+	// API密钥，在商户平台设置
+	public static final String API_KEY = ConstantValue.API_KEY;
+	
+}	

@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f8f8f8"
+    android:orientation="vertical">
+
+    <com.cnsunrun.common.widget.titlebar.TitleBar
+        android:id="@+id/titleBar"
+        style="@style/NewWhiteBackTitleBarStyle"
+        app:backgroundColor="@color/white"
+        app:bottomDividerHeight="1dp"
+        app:title="发红包" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="10dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:background="@drawable/shape_white_recharge_bg"
+            android:orientation="horizontal"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:text="请输入红包总金额" />
+
+            <EditText
+                android:id="@+id/etMoney"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@null"
+                android:gravity="right|center_vertical"
+                android:hint="0.00"
+                android:imeActionId="@integer/rc_custom_service_evaluation_interval"
+                android:imeOptions="actionDone"
+                android:inputType="number"
+                android:maxLength="10"
+                android:paddingRight="@dimen/dp_10"
+                android:textColorHint="@color/text_color_999"
+                android:textSize="16sp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:text="元"
+                android:textColor="@color/text_color_333"
+                android:textSize="15sp" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:background="@drawable/shape_white_recharge_bg"
+            android:orientation="horizontal"
+            android:paddingLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:paddingRight="10dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:text="红包个数" />
+
+            <EditText
+                android:id="@+id/etRedPackNumber"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@null"
+                android:gravity="right|center_vertical"
+                android:imeActionId="@integer/rc_custom_service_evaluation_interval"
+                android:imeOptions="actionDone"
+                android:inputType="numberDecimal"
+                android:maxLength="10"
+                android:paddingRight="@dimen/dp_10"
+                android:textColor="@color/text_color_333"
+                android:textSize="16sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:text="个"
+                android:textColor="@color/text_color_333"
+                android:textSize="15sp" />
+        </LinearLayout>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="群组共0人"
+            android:paddingLeft="10dp"
+            android:id="@+id/tvMemberNumber"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:textColor="@color/text_color_999"
+            android:visibility="gone"
+            android:textSize="12sp" />
+        <LinearLayout
+            android:id="@+id/llleiDian"
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:background="@drawable/shape_white_recharge_bg"
+            android:orientation="horizontal"
+            android:paddingLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:visibility="gone"
+            android:paddingRight="10dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:text="雷数" />
+
+            <EditText
+                android:id="@+id/etBombNumber"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@null"
+                android:gravity="right|center_vertical"
+                android:hint="填写雷点数"
+                android:imeActionId="@integer/rc_custom_service_evaluation_interval"
+                android:imeOptions="actionDone"
+                android:inputType="number"
+                android:maxLength="10"
+                android:paddingRight="@dimen/dp_10"
+                android:textColorHint="@color/text_color_999"
+                android:textSize="16sp" />
+
+            <!--<TextView-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_gravity="center_vertical"-->
+                <!--android:text=""-->
+                <!--android:textColor="@color/text_color_333"-->
+                <!--android:textSize="15sp" />-->
+        </LinearLayout>
+        <com.cnsunrun.commonui.widget.roundwidget.QMUIRoundButton
+            android:id="@+id/btnSubmit"
+            style="@style/submitBtnR1"
+            android:layout_marginTop="18dp"
+            android:text="塞进红包"
+            android:textSize="18sp"
+            app:qmui_backgroundColor="@drawable/submit_btn_bg_select_new" />
+    </LinearLayout>
+
+
+</LinearLayout>

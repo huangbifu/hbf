@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/activity_search"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_some"
+    android:orientation="vertical">
+
+    <com.cnsunrun.commonui.widget.titlebar.TitleBar
+        android:id="@+id/titleBar"
+        style="@style/BackTitleBarStyle"
+        app:bottomDividerHeight="1dp"
+        app:leftAsFinish="false"
+        app:leftIcon="@drawable/home_notice_btn_black"
+        app:title="群组"></com.cnsunrun.commonui.widget.titlebar.TitleBar>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:background="@color/white"
+                android:gravity="center_vertical">
+
+                <com.cnsunrun.common.widget.VerticalSwitchLayout
+                    android:id="@+id/vslNotices"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:gravity="center_vertical" />
+            </LinearLayout>
+
+            <com.cnsunrun.common.widget.MultipleViewPager
+                android:id="@+id/multiViewPager"
+                android:layout_width="match_parent"
+                android:layout_height="170dp"
+                android:clipChildren="false"
+                android:clipToPadding="false"
+                android:paddingBottom="10dp"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:paddingTop="10dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="15dp"
+                android:gravity="center_horizontal"
+                android:orientation="horizontal">
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/rlvIndicator"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:paddingTop="15dp">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="146dp"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/ic_game_bg" />
+
+                <TextView
+                    android:id="@+id/tvTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="40dp"
+                    android:layout_marginTop="20dp"
+                    android:text="扫雷游戏"
+                    android:textColor="#f2f2f2"
+                    android:textSize="24sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tvRule"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tvTitle"
+                    android:layout_marginLeft="40dp"
+                    android:layout_marginTop="5dp"
+                    android:text="查看游戏规则>>"
+                    android:textColor="#f2f2f2"
+                    android:textSize="14sp" />
+
+                <com.cnsunrun.commonui.widget.roundwidget.QMUIRoundButton
+                    android:id="@+id/btnStartGame"
+                    style="@style/smallBtnBorderR2"
+                    android:layout_width="110dp"
+                    android:layout_height="30dp"
+                    android:layout_below="@+id/tvRule"
+                    android:layout_marginLeft="40dp"
+                    android:layout_marginTop="15dp"
+                    android:padding="0dp"
+                    android:text="开始游戏"
+                    android:textColor="#fe481e"
+                    app:qmui_backgroundColor="#feea45" />
+
+            </RelativeLayout>
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="146dp"
+                android:scaleType="fitCenter"
+                android:id="@+id/imgGame2"
+                android:src="@drawable/ic_game_3" />
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="146dp"
+                android:scaleType="fitCenter"
+                android:id="@+id/imgGame3"
+                android:src="@drawable/ic_game_2" />
+        </LinearLayout>
+    </ScrollView>
+
+    <ImageView
+        android:id="@+id/imgCode"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+</LinearLayout>

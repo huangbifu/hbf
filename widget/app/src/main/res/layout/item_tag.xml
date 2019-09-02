@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/checkbox"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:paddingLeft="12dp"
+    android:paddingTop="9dp"
+    android:paddingRight="12dp"
+    android:paddingBottom="9dp"
+    android:layout_marginTop="10dp"
+    android:layout_marginRight="10dp"
+    android:text="味道好 56"
+    android:textColor="@drawable/selector_radio_text_color"
+    android:background="@drawable/selector_radio"/>
+

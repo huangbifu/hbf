@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp"
+    >
+
+    <ImageView
+        android:id="@+id/imgLeftHint"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:scaleType="fitCenter"
+        android:layout_marginRight="10dp"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/txtImportant"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="*"
+        android:textColor="#F00"
+        android:textSize="15sp" />
+
+    <TextView
+        android:id="@+id/txtLab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="标签"
+        android:textColor="@color/text3"
+        android:textSize="15sp" />
+
+    <EditText
+        android:id="@+id/editInput"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:background="@null"
+        android:gravity="right|center_vertical"
+        android:hint="请输入内容"
+        android:singleLine="true"
+        android:textColor="@color/main_text_color"
+        android:textColorHint="@color/hint_text_color"
+        android:visibility="gone"
+        android:layout_marginRight="15dp"
+        android:textSize="15sp" />
+    <TextView
+        android:id="@+id/txtContent"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:gravity="right|center_vertical"
+        android:text="内容"
+        android:layout_marginRight="15dp"
+        android:textColor="@color/text3"
+        android:textSize="15sp" />
+    <ImageView
+        android:id="@+id/imgRightAction"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:scaleType="fitCenter"
+        android:src="@drawable/ic_item_right_next"
+        />
+</LinearLayout>

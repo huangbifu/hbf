@@ -1,0 +1,372 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.cnsunrun">
+
+    <uses-permission android:name="android.permission.CAMERA" />
+    <!-- 用于访问网络，网络定位需要上网 -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <!-- 写入扩展存储，向扩展卡写入数据，用于写入缓存定位数据 -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <!-- 用于进行网络定位 -->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <!-- 获取运营商信息，用于支持提供运营商信息相关的接口 -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <!-- 用于访问GPS定位 -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <!-- 用于读取手机当前的状态 -->
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <!-- 用于访问wifi网络信息，wifi信息会用于进行网络定位 -->
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <!-- 这个权限用于获取wifi的获取权限，wifi信息会用来进行网络定位 -->
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+
+    <!-- 这个权限用于获取wifi的获取权限，wifi信息会用来进行网络定位 -->
+    <uses-permission android:name="android.permission.GET_TASKS" />
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.WRITE_OWNER_DATA" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.FLASHLIGHT" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.READ_LOGS" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.CHANGE_CONFIGURATION" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+
+    <application xmlns:tools="http://schemas.android.com/tools"
+        android:name=".common.CommonApp"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:largeHeap="true"
+        android:theme="@style/UITheme"
+        android:networkSecurityConfig="@xml/network_security_config"
+        tools:replace="android:theme">
+        <uses-library
+            android:name="org.apache.http.legacy"
+            android:required="false" />
+        <!--Glide模块-->
+        <!--配置glide加载https所需要的GlideModule-->
+        <meta-data
+            android:name="com.cnsunrun.common.boxing.OkHttpGlideModule"
+            android:value="GlideModule"/>
+
+        <!-- 支付宝支付配置开始 -->
+        <activity
+            android:name="com.alipay.sdk.app.H5PayActivity"
+            android:configChanges="orientation|keyboardHidden|navigation"
+            android:exported="false"
+            android:screenOrientation="behind"></activity>
+        <activity
+            android:name="com.alipay.sdk.auth.AuthActivity"
+            android:configChanges="orientation|keyboardHidden|navigation"
+            android:exported="false"
+            android:screenOrientation="behind"></activity>
+        <!-- 支付宝支付配置结束 -->
+        <activity
+            android:name=".main.SplashActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/SplashTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+
+        <activity
+            android:name=".login.LoginActivity"
+            android:launchMode="singleTask" />
+        <activity android:name=".login.RegistActivity" />
+        <activity android:name=".login.ForgetPasswordActivity" />
+        <activity android:name=".login.SmsLoginActivity" />
+
+
+        <!-- 极光推送配置 -->
+        <receiver
+            android:name=".common.receiver.AppPushReceiver"
+            android:enabled="true">
+            <intent-filter android:priority="1000">
+                <action android:name="cn.jpush.android.intent.REGISTRATION" />
+                <action android:name="cn.jpush.android.intent.MESSAGE_RECEIVED" />
+                <action android:name="cn.jpush.android.intent.NOTIFICATION_RECEIVED" />
+                <action android:name="cn.jpush.android.intent.NOTIFICATION_OPENED" />
+
+                <category android:name="com.cnsunrun.xingyu" />
+            </intent-filter>
+        </receiver>
+
+        <!-- 适配7.0相机相册权限 -->
+        <provider
+            android:name=".common.provider.ImageFileProvider"
+            android:authorities="com.cnsunrun.xingyu.file.provider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/boxing_file_provider" />
+        </provider>
+        <!-- 适配7.0相机相册权限 -->
+        <provider
+            android:name="android.support.v4.content.FileProvider"
+            android:authorities="com.cnsunrun.xingyu.FileProvider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/rc_file_path" />
+        </provider>
+
+        <!-- 适配7.0相机相册权限 -->
+        <provider
+            android:name="com.cnsunrun.common.provider.ImageFileProvider"
+            android:authorities="com.cnsunrun.xingyu.file.provider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/boxing_file_provider" />
+        </provider>
+
+        <activity
+            android:name="com.tencent.bugly.beta.ui.BetaActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize|locale"
+            android:theme="@android:style/Theme.Translucent" />
+        <!-- 融云广播接受者 -->
+        <receiver
+            android:name="com.cnsunrun.common.receiver.CharNotificationReceiver"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="io.rong.push.intent.MESSAGE_ARRIVED" />
+                <action android:name="io.rong.push.intent.MI_MESSAGE_ARRIVED" />
+                <action android:name="io.rong.push.intent.MESSAGE_CLICKED" />
+                <action android:name="io.rong.push.intent.MI_MESSAGE_CLICKED" />
+            </intent-filter>
+        </receiver>
+
+        <!-- 列表界面 -->
+        <activity
+            android:name=".chat.ChatNavigatorActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustResize">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data
+                    android:host="com.cnsunrun.xingyu"
+                    android:pathPrefix="/conversationlist"
+                    android:scheme="rong" />
+            </intent-filter>
+        </activity>
+
+        <!-- 我的-聊天界面 -->
+        <activity
+            android:name=".chat.ConversationActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustResize">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data
+                    android:host="com.cnsunrun.xingyu"
+                    android:pathPrefix="/conversation/group"
+                    android:scheme="rong" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".chat.ConversationOneActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustResize">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data
+                    android:host="com.cnsunrun.xingyu"
+                    android:pathPrefix="/conversation/private"
+                    android:scheme="rong" />
+            </intent-filter>
+        </activity>
+
+        <!-- 头像裁减界面 -->
+        <activity
+            android:name="com.yalantis.ucrop.UCropActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+
+        <activity
+            android:name=".chat.ChatSearchActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".chat.ChatSearchHistoryActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".chat.ChatSearchAddressBookActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".chat.ChatSearchFriendsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".chat.ChatSearchDynamicsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".chat.ChatSetInfoActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".chat.ChatUserInfoActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".chat.ChatSelectLinkManActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".chat.ChatAddUserActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".chat.ChatAddRemarkActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".chat.ChatDynamicsDetailsActivity"
+            android:screenOrientation="portrait" />
+        <!--<activity android:name=".chat.ChatAddDynamicsActivity" android:screenOrientation="portrait"/>-->
+        <activity
+            android:name=".chat.ChatNewFriendsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".chat.ChatGroupListActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".chat.ChatGroupSetInfoActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".chat.ChatGroupNoticeDetailsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".chat.ChatGroupPeoplesActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".chat.ChatModifyGroupNameActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".chat.ChatModifyGroupCardActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".mine.activity.RechargeActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+        <activity
+            android:name=".mine.activity.MyRecommendActvity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".mine.activity.WithdrawalActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+        <activity
+            android:name=".mine.activity.TransferActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+        <activity android:name=".mine.activity.PromotionPosterActivity" />
+        <activity android:name=".mine.activity.WebActivity" />
+        <activity android:name=".mine.activity.LuckDrawActivity" />
+        <activity
+            android:name=".mine.activity.FillCodeActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+        <activity
+            android:name=".mine.activity.SettingPayPasswordActivity"
+            android:screenOrientation="portrait" />
+        <!--<activity-->
+        <!--android:name=".mine.activity.ModifyPwdActivity"-->
+        <!--android:screenOrientation="portrait" />-->
+        <activity
+            android:name=".mine.activity.UserInfoActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".mine.activity.UpdateInfoActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+        <activity android:name=".mine.activity.MessageActivity" />
+        <activity android:name=".messages.NoticeMessageDetailsActivity" />
+        <activity android:name=".messages.NoticeMessageActivity" />
+        <activity android:name=".chat.SendRedpackActivity" />
+        <activity android:name=".chat.RedpackPageActivity" />
+        <activity
+            android:name=".mine.activity.MoneyRecordActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".mine.activity.RecommendLevelActrivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".mine.activity.SettingActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".mine.activity.MessageNoticeActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".mine.activity.AccountSafeActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".chat.RedpackRecordActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".chat.GameGroupListActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".mine.activity.SettingsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".mine.activity.ChangePhoneActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".mine.activity.ModifyPayPasswordActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".chat.ScanQRActivity"
+            android:screenOrientation="portrait" />
+        <activity android:name=".chat.WebDetailsActivity" />
+        <activity
+            android:name=".mine.activity.MyBankCardActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".mine.activity.AddBankCardActivity"
+            android:screenOrientation="portrait" />
+        <activity android:name=".chat.ChatModifyGroupNoticeActivity"    android:screenOrientation="portrait"/>
+        <activity android:name=".chat.GroupMemberListActivity"    android:screenOrientation="portrait"/>
+
+        <service android:name=".common.service.DownLoadService" />
+        <activity
+            android:name=".mine.activity.RechargeOffLineActivity"
+            android:screenOrientation="portrait" />
+        <activity android:name=".mine.activity.QiandaoActivity"   android:screenOrientation="portrait" />
+        <activity android:name=".mine.activity.QIandaoRecordActivity"   android:screenOrientation="portrait" />
+        <activity android:name=".chat.GameTestActivity"    android:screenOrientation="portrait"/>
+        <activity android:name=".mine.activity.ModifyPwdActivity"    android:screenOrientation="portrait"/>
+        <activity android:name=".mine.activity.BindZhifubaoActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".mine.activity.AddZhifubaoAccountActivity"  android:screenOrientation="portrait"/>
+        <activity android:name=".mine.activity.UnBindZhifubaoActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".mine.activity.AvoidCloseActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".chat.JielongGameGroupListActivity"  android:screenOrientation="portrait"/>
+        <activity android:name=".chat.SendJielongRedpackActivity" />
+        <activity android:name=".mine.activity.VideoPlayActivity"   android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".chat.SendNineRedpackActivity" />
+    </application>
+
+</manifest>

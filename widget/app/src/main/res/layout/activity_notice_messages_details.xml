@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/backgroud_color"
+    android:orientation="vertical">
+
+    <com.cnsunrun.commonui.widget.titlebar.TitleBar
+        android:id="@+id/titleBar"
+        style="@style/BackTitleBarStyle"
+        app:title="详情" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <include layout="@layout/item_notice_message" />
+
+            <TextView
+                android:id="@+id/tv_message_content"
+                style="@style/textView_style_14sp"
+                android:lineSpacingMultiplier="1.5"
+                android:padding="10dp"
+                android:textColor="@color/text_color_333" />
+
+            <WebView
+                android:id="@+id/webView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"></WebView>
+            <!--<TextView-->
+            <!--android:padding="10dp"-->
+            <!--android:lineSpacingMultiplier="1.5"-->
+            <!--android:id="@+id/tv_message_content"-->
+            <!--style="@style/textView_style_14sp"-->
+            <!--android:text="尊敬的业主:\n为配合济南市鲁能领秀城东村加压站供水管道工程,本小区将要停水,请做好准备"-->
+            <!--android:textColor="@color/text_color_333" />-->
+            <!--<TextView-->
+            <!--android:padding="10dp"-->
+            <!--android:lineSpacingMultiplier="1.5"-->
+            <!--android:id="@+id/tv_message_author"-->
+            <!--style="@style/textView_style_14sp"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:gravity="right"-->
+            <!--android:layout_marginTop="20dp"-->
+            <!--android:text="花园小区物业"-->
+            <!--android:textColor="@color/text4" />-->
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

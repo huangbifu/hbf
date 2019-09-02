@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/activity_search"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/backgroud_color"
+    android:orientation="vertical">
+
+    <com.cnsunrun.commonui.widget.titlebar.TitleBar
+        android:id="@+id/titleBar"
+        style="@style/WhiteBackTitleBarStyle"
+        app:leftText="详情" />
+
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <include layout="@layout/include_recyclerview_reflayout" />
+    </FrameLayout>
+    <com.cnsunrun.common.widget.BoxLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        app:box_Padding="10 12 10 12"
+        android:background="@color/white"
+        app:box_Border="top"
+        app:box_BorderColor="@color/limit_line1"
+        app:box_BorderWidth="1dp"
+        android:layout_height="wrap_content">
+        <EditText
+            android:id="@+id/editContent"
+            android:layout_width="match_parent"
+            android:minHeight="36dp"
+            android:layout_height="wrap_content"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:gravity="center_vertical|left"
+            android:hint="说点什么..."
+            android:imeOptions="actionSend"
+            android:textColorHint="@color/text5"
+            android:focusable="false"
+            android:background="@drawable/shape_chat_comment_bg"
+            />
+    </com.cnsunrun.common.widget.BoxLayout>
+</LinearLayout>

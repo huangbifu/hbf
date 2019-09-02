@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/shape_white_bg"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tv_dialog_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="5dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="15dp"
+        android:text="@string/prompting"
+        android:textColor="@color/text_color_333"
+        android:textSize="@dimen/sp16"
+        android:visibility="gone" />
+
+    <ImageView
+        android:id="@+id/iv_dialog_image"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="15dp"
+        android:src="@drawable/ic_failure_icon"
+        android:visibility="visible" />
+
+    <TextView
+        android:id="@+id/tv_dialog_show_message"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="15dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:text="@string/confirm_delete"
+        android:textColor="@color/text_color_333"
+        android:textSize="@dimen/sp14" />
+
+    <EditText
+        android:id="@+id/dialog_edit_message"
+        android:layout_width="match_parent"
+        android:layout_height="34dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginLeft="25dp"
+        android:layout_marginRight="25dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/shape_gray666_btnbg"
+        android:hint="请输入文本内容"
+        android:paddingLeft="10dp"
+        android:singleLine="true"
+        android:textColor="@color/text_color_333"
+        android:textColorHint="@color/text_color_666"
+        android:textSize="14sp"
+        android:visibility="gone" />
+
+
+    <LinearLayout
+        android:id="@+id/ll_bottom_buttons"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/tv_cancel"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginRight="10dp"
+            android:layout_weight="1"
+            android:background="@drawable/shape_gray666_btnbg"
+            android:gravity="center"
+            android:text="@string/cancel"
+            android:textColor="@color/text_color_666"
+            android:textSize="@dimen/sp15" />
+
+
+        <TextView
+            android:id="@+id/tv_confirm"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="10dp"
+            android:layout_weight="1"
+            android:background="@drawable/shape_gray666_btnbg"
+            android:gravity="center"
+            android:text="@string/confirm"
+            android:textColor="@color/text_color_666"
+            android:textSize="@dimen/sp15" />
+
+    </LinearLayout>
+
+</LinearLayout>

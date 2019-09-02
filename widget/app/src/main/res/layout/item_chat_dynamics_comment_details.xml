@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/white_clickable_selector"
+    android:orientation="vertical">
+
+    <com.cnsunrun.common.widget.BoxLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginBottom="10dp"
+        app:box_Padding="10 13 10 0">
+
+        <ImageView
+            android:id="@+id/imgUserIcon"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_marginRight="10dp"
+            android:background="@color/text5" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/txtUserName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:text="温柔的风穿堂过"
+                android:textColor="@color/text1"
+                android:textSize="17sp" />
+
+            <TextView
+                android:id="@+id/txtTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3dp"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:text="2017/02/01"
+                android:textColor="@color/text4"
+                android:textSize="13sp" />
+            <TextView
+                android:id="@+id/txtContent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:ellipsize="end"
+                android:text="人生就像一场戏,因为有缘才相聚."
+                android:textColor="@color/text3"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+
+    </com.cnsunrun.common.widget.BoxLayout>
+
+
+    <View style="@style/limit_line"
+        android:id="@+id/bottomLine"
+        android:layout_marginLeft="10dp"/>
+</LinearLayout>

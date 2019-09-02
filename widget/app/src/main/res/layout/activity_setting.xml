@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/com_dark_bg_color"
+    >
+
+    <com.cnsunrun.common.widget.titlebar.TitleBar
+        android:id="@+id/title_bar"
+        style="@style/BackTitleBarStyle"
+        app:backgroundColor="@color/white"
+        app:bottomDividerHeight="1dp"
+        app:title="设置"
+        app:titleColor="@color/black"
+        app:leftVisible="visible"
+        app:leftIcon="@drawable/back"
+        />
+
+    <RelativeLayout
+        android:id="@+id/layout_account_safe"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="@color/white">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="账号安全"
+            android:layout_centerVertical="true"
+            android:paddingLeft="10dp"
+            android:textSize="15sp"
+            android:textColor="@color/text_color_333"
+            />
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerInParent="true"
+            android:src="@drawable/help_btn_select_nor"
+            android:paddingRight="10dp"/>
+
+    </RelativeLayout>
+
+    <View
+       style="@style/divide_line_1px"/>
+
+    <RelativeLayout
+        android:id="@+id/layout_message_notice"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="@color/white"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="新消息通知"
+            android:layout_centerVertical="true"
+            android:paddingLeft="10dp"
+            android:textSize="15sp"
+            android:textColor="@color/text_color_333"
+            />
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerInParent="true"
+            android:src="@drawable/help_btn_select_nor"
+            android:paddingRight="10dp"
+            />
+
+    </RelativeLayout>
+
+    <View
+        style="@style/divide_line_1px"/>
+
+    <RelativeLayout
+        android:id="@+id/layout_current_version"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="@color/white">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="当前版本"
+            android:layout_centerVertical="true"
+            android:paddingLeft="10dp"
+            android:textSize="15sp"
+            android:textColor="@color/text_color_333"
+            />
+
+        <TextView
+            android:id="@+id/tv_version"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/text_color_333"
+            android:layout_alignParentRight="true"
+            android:layout_centerInParent="true"
+            android:paddingRight="10dp"
+            android:textSize="15sp" />
+
+    </RelativeLayout>
+
+    <View
+        style="@style/divide_line_1px"/>
+
+    <RelativeLayout
+        android:id="@+id/layout_clear_cache"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="@color/white">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="清理缓存"
+            android:layout_centerVertical="true"
+            android:paddingLeft="10dp"
+            android:textSize="15sp"
+            android:textColor="@color/com_color"
+            />
+
+
+        <TextView
+            android:id="@+id/tv_cache_size"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/text_color_333"
+            android:layout_toLeftOf="@+id/iv_right_icon"
+            android:layout_centerInParent="true"
+            android:layout_marginRight="5dp"
+            android:textSize="15sp" />
+
+        <ImageView
+            android:id="@+id/iv_right_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerInParent="true"
+            android:src="@drawable/help_btn_select_nor"
+            android:paddingRight="10dp"/>
+
+    </RelativeLayout>
+    <View
+        style="@style/divide_line_1px"/>
+
+    <RelativeLayout
+        android:id="@+id/layout_clear_all_chat_cache"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="@color/white">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="清理所有聊天记录"
+            android:layout_centerVertical="true"
+            android:paddingLeft="10dp"
+            android:textSize="15sp"
+            android:textColor="@color/com_color"
+            />
+
+    </RelativeLayout>
+
+    <View
+        style="@style/divide_line_10dp"/>
+    <RelativeLayout
+        android:id="@+id/layout_logout"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:gravity="center"
+        android:background="@color/white">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="退出"
+            android:layout_centerVertical="true"
+            android:textSize="14sp"
+            android:textColor="@color/text_color_333"
+            />
+    </RelativeLayout>
+
+
+</LinearLayout>

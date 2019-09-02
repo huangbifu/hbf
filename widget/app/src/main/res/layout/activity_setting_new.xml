@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f8f8f8"
+    android:orientation="vertical">
+
+    <com.cnsunrun.common.widget.titlebar.TitleBar
+        android:id="@+id/titleBar"
+        style="@style/NewWhiteBackTitleBarStyle"
+        app:backgroundColor="@color/white"
+        app:bottomDividerHeight="1dp"
+        app:title="设置" />
+
+    <com.cnsunrun.common.widget.FormLabLayout
+        android:id="@+id/flAccountSafe"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:background="@drawable/selector_white"
+        android:clickable="true"
+        app:lab_Color="@color/text_color_333"
+        app:lab_RightIcon="@drawable/ic_to_more_2x"
+        app:lab_Txt="账户安全" />
+
+    <com.cnsunrun.common.widget.FormLabLayout
+        android:id="@+id/flNewMsg"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:layout_marginTop="1dp"
+        android:background="@drawable/selector_white"
+        android:clickable="true"
+        app:lab_Color="@color/text_color_333"
+        app:lab_RightIcon="@drawable/ic_to_more_2x"
+        app:lab_Txt="新消息通知" />
+
+    <com.cnsunrun.common.widget.FormLabLayout
+        android:id="@+id/flCurrentVersion"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:layout_marginTop="1dp"
+        android:background="@drawable/selector_white"
+        android:clickable="true"
+        app:lab_Color="@color/text_color_333"
+        app:lab_Content="V1.0"
+        app:lab_Txt="当前版本" />
+
+    <com.cnsunrun.common.widget.FormLabLayout
+        android:id="@+id/flCleanCache"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:layout_marginTop="1dp"
+        android:background="@drawable/selector_white"
+        android:clickable="true"
+        app:lab_Color="@color/color_fe481e"
+        app:lab_Txt="清理缓存" />
+
+    <com.cnsunrun.common.widget.FormLabLayout
+        android:id="@+id/flCleanChatRecord"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:layout_marginTop="1dp"
+        android:background="@drawable/selector_white"
+        android:clickable="true"
+        app:lab_Color="@color/color_fe481e"
+        app:lab_Txt="清理所有聊天记录" />
+
+    <View style="@style/divide_line_1px_e9e9e9" />
+
+    <View
+        style="@style/divide_line_1px_e9e9e9"
+        android:layout_marginTop="10dp" />
+
+    <RelativeLayout
+        android:id="@+id/rlExit"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:background="@drawable/selector_white"
+        android:clickable="true">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="退出登录"
+            android:textColor="@color/text_color_333"
+            android:textSize="14sp" />
+    </RelativeLayout>
+
+    <View style="@style/divide_line_1px_e9e9e9" />
+
+</LinearLayout>

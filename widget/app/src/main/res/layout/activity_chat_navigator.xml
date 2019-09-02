@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <com.cnsunrun.commonui.widget.viewpager.NoScrollViewPager
+        android:id="@+id/vp_main_center"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/lin_main_buttom" />
+
+
+    <!--<View-->
+        <!--style="@style/limit_line"-->
+        <!--android:layout_above="@+id/lin_main_buttom" />-->
+
+    <LinearLayout
+        android:id="@+id/lin_main_buttom"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical">
+
+        <com.flyco.tablayout.CommonTabLayout
+            android:id="@+id/tab_layout"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:background="@color/white"
+            android:paddingBottom="5dp"
+            app:tl_indicator_color="@color/white"
+            android:paddingTop="5dp"
+            app:tl_iconHeight="23dp"
+            app:tl_iconMargin="0dp"
+            app:tl_iconWidth="23dp"
+            app:tl_textSelectColor="@color/color_fe481e"
+            app:tl_textUnselectColor="@color/text_color_999"
+            app:tl_textsize="11sp" />
+    </LinearLayout>
+</RelativeLayout>

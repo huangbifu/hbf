@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_login_three"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/backgroud_color"
+    android:orientation="vertical">
+
+    <com.cnsunrun.commonui.widget.titlebar.TitleBar
+        android:id="@+id/titleBar"
+        style="@style/WhiteBackTitleBarStyle"
+        app:backgroundColor="@color/orange_color_f97823"
+        app:bottomDividerHeight="0dp"
+        app:rightVisible="gone"
+        app:title="登录"
+        app:titleColor="@color/white" />
+
+
+    <ImageView
+        android:layout_width="83dp"
+        android:layout_height="83dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="74dp"
+        android:src="@drawable/ic_good_3x" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="78dp"
+        android:orientation="vertical">
+
+        <EditText
+            style="@style/edit_text_style"
+            android:hint="请输入用户名或手机号"
+            android:paddingLeft="10dp" />
+
+        <EditText
+            style="@style/edit_text_style"
+            android:layout_marginTop="10dp"
+            android:hint="请输入密码"
+            android:inputType="numberPassword"
+            android:paddingLeft="10dp" />
+    </LinearLayout>
+
+
+    <TextView
+        style="@style/bottom_button_style"
+        android:layout_marginTop="90dp"
+        android:text="登录" />
+
+    <TextView
+        style="@style/textView_style_14sp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="10dp"
+        android:padding="5dp"
+        android:text="@string/forgat_password"
+        android:textColor="@color/text_color_333"
+        android:textSize="12sp" />
+</LinearLayout>

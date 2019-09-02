@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f8f8f8"
+    android:orientation="vertical">
+
+    <com.cnsunrun.common.widget.titlebar.TitleBar
+        android:id="@+id/titleBar"
+        style="@style/WhiteLeftTitleBarStyle"
+        app:backgroundColor="@color/color_fe481e"
+        app:bottomDivider="@color/color_fe481e"
+        app:bottomDividerHeight="0dp"
+        app:title="资金记录" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:id="@+id/llContainer"
+            android:layout_width="match_parent"
+            android:layout_height="64dp"
+            android:background="@color/color_fe481e"
+            android:orientation="vertical"
+            android:paddingLeft="@dimen/dp_10"
+            android:paddingTop="5dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="我的钱包(元)"
+                android:textColor="@color/white"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/tvMoney"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:text=""
+                android:textColor="@color/white"
+                android:textSize="25sp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+        <com.flyco.tablayout.SlidingTabLayout
+            android:id="@+id/tabLayout"
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:layout_marginBottom="12dp"
+            android:background="@color/white"
+            android:layout_gravity="bottom"
+            app:tl_indicator_corner_radius="8dp"
+            app:tl_indicator_height="3dp"
+            app:tl_indicator_margin_bottom="5dp"
+            app:tl_indicator_width="30dp"
+            app:tl_indicator_color="@color/color_fe481e"
+            app:tl_tab_padding="15dp"
+            app:tl_tab_space_equal="true"
+            app:tl_textSelectColor="@color/color_fe481e"
+            app:tl_textUnselectColor="@color/hint_text_color"
+            app:tl_underline_color="#dfdfdf" />
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="-10dp"
+            android:src="@drawable/mine_bg_img" />
+    </FrameLayout>
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/viewPager"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:overScrollMode="never"
+        android:scrollbars="none" />
+</LinearLayout>

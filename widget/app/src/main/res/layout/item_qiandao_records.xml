@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="50dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/selec_itemview">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_toRightOf="@+id/imgRedDot"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tvTitle"
+            style="@style/textView_style_14sp"
+            android:text="尚软科技"
+            android:layout_weight="1"
+            android:singleLine="true"
+            android:ellipsize="end"
+            android:textColor="@color/text_color_333" />
+
+        <TextView
+            style="@style/textView_style_14sp"
+            android:id="@+id/tvTime"
+            android:text="2017/10/20 12:30:23"
+            android:textColor="@color/text_color_999"
+            android:textSize="11sp" />
+
+
+    </LinearLayout>
+
+
+    <View
+        style="@style/limit_line"
+        android:layout_alignParentBottom="true" />
+
+</RelativeLayout>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/backgroud_color"
+    android:orientation="vertical">
+
+    <com.cnsunrun.commonui.widget.titlebar.TitleBar
+        android:id="@+id/titleBar"
+        style="@style/BackTitleBarStyle"
+        app:title="备注信息"
+        app:rightText="完成"
+        app:rightVisible="visible"
+        />
+
+    <com.cnsunrun.commonui.widget.edittext.EditView
+        android:layout_width="match_parent"
+        android:layout_height="49dp"
+        android:id="@+id/editRemark"
+        android:gravity="left"
+        app:hintText="请输入备注信息"
+        app:rightImg="@drawable/ic_clear_edit_text"
+        app:rightAction="clearAll"
+        app:maxLength="15"
+        android:background="@color/white"
+        />
+
+
+
+</LinearLayout>

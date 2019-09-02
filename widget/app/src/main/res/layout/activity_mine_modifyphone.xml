@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/backgroud_color"
+    android:orientation="vertical">
+
+    <com.cnsunrun.commonui.widget.titlebar.TitleBar
+        android:id="@+id/titleBar"
+        style="@style/NewWhiteBackTitleBarStyle"
+        app:title="设置支付密码" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:paddingTop="10dp">
+
+        <com.cnsunrun.commonui.widget.edittext.EditView
+            android:id="@+id/edit_pay_password"
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/shape_white_bg"
+            app:hintText="支付密码"
+            app:inputType="number"
+            app:rightAction="password"
+            app:rightImg="@drawable/login_icon_invisible_nor" />
+
+        <com.cnsunrun.commonui.widget.roundwidget.QMUIRoundButton
+            android:id="@+id/btnNext"
+            style="@style/submitBtnR1"
+            android:layout_marginTop="20dp"
+            android:text="确认"
+            app:qmui_backgroundColor="@drawable/submit_btn_bg_select_new" />
+    </LinearLayout>
+
+
+</LinearLayout>

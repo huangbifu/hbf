@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/backgroud_color"
+    android:orientation="vertical">
+<!--@drawable/ic_chat_message_btn_person-->
+    <com.cnsunrun.commonui.widget.titlebar.TitleBar
+        android:id="@+id/titleBar"
+        style="@style/BackTitleBarStyle"
+        app:leftIcon="@drawable/home_notice_btn_black"
+        app:rightVisible="visible"
+        app:title="消息"
+        app:leftAsFinish="false"
+        app:rightIcon="@drawable/ic_common_addfriend_icon_normal_3x"
+        />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:background="@color/white"
+        android:layout_marginBottom="10dp"
+        android:layout_height="44dp">
+        <EditText
+            android:id="@+id/edit_search"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_alignBottom="@+id/titleBar"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/shape_search_border_bg"
+            android:drawableLeft="@drawable/ic_chat_search_input"
+            android:drawablePadding="4dp"
+            android:gravity="center_vertical"
+            android:hint="搜索"
+            android:imeOptions="actionSearch"
+            android:inputType="text"
+            android:paddingLeft="8dp"
+            android:textColor="@color/text_color_666"
+            android:textColorHint="@color/text4"
+            android:textSize="13sp" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:id="@+id/searchResult"
+        android:visibility="gone"
+        android:orientation="vertical"
+        android:layout_height="match_parent">
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:overScrollMode="never"
+            android:scrollbars="none" />
+    </LinearLayout>
+    <fragment
+        android:id="@+id/conversationlist"
+        android:name="com.cnsunrun.chat.fragment.CusConversationListFragment"
+        android:layout_width="match_parent"
+        android:layout_below="@+id/converslist_title"
+        android:layout_height="match_parent" />
+
+</LinearLayout>

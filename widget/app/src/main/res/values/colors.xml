@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorAccent">#FF4081</color>
+    <color name="colorPrimary">#000000</color>
+    <color name="colorPrimaryDark">#000000</color>
+    <color name="title_color">#FFFFFF</color>
+    <color name="divide_line_out">#dadada</color>
+    <color name="main_text_color">#333333</color>
+    <color name="hint_text_color">#999999</color>
+    <color name="backgroud_color">#f2f2f2</color>
+    <color name="search_tag_color">#f5f5f5</color>
+    <color name="white">#fff</color>
+    <color name="submit_btn_bg">#5aa8f7</color>
+    <color name="submit_btn_dis_bg">#DADADA</color>
+    <color name="home_search_bg">#4a96e3</color>
+    <color name="text_gray_color_d0">#d0d0d0</color>
+    <color name="quanxian_tv_color">#333333</color>
+    <color name="gray">#DDDDDD</color>
+    <color name="green_color">#8bce25</color>
+    <color name="green_a7dc57">#a7dc57</color>
+    <color name="green_color_bbd594">#bbd594</color>
+    <color name="green_color_5cba46">#5cba46</color>
+    <color name="red_color">#fc5455</color>
+    <color name="red_color_ed3823">#ed3823</color>
+    <color name="red_color_ff7879">#ff7879</color>
+    <color name="red_color_ff0000">#ff0000</color>
+    <color name="red_color_ff7e37">#ff7e37</color>
+    <color name="color_title_bg">#0367ab</color>
+    <color name="forget_pwd_color">#1680ce</color>
+    <color name="wrong_orange_color_">#ff5501</color>
+    <color name="del_orange_color_">#dc832c</color>
+    <color name="catpcha_btn_color">#8abfe6</color>
+
+    <color name="blance_bg_color">#f97737</color>
+    <color name="text0">#111111</color>
+    <color name="lucency_white">#33ffffff</color>
+    <!--按钮默认背景/边框色 默认文字颜色-->
+    <color name="main_button_color">@color/color_fe481e</color>
+    <color name="main_button_color_press">#AAfe481e</color>
+    <color name="main_button_color_disenable">#dadada</color>
+    <color name="color_fe481e">#fe481e</color>
+    <color name="fafafa">#fafafa</color>
+    <color name="color_8590A6">#8590A6</color>
+    <color name="grayF4">#F4F4F4</color>
+    <color name="color_f8f8f8">#f8f8f8</color>
+    <color name="def_normal">#383838</color>
+    <color name="color_0084ff">#0084ff</color>
+    <color name="def_window">#f5f5f9</color>
+
+</resources>

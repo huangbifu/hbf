@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/com_dark_bg_color"
+    >
+
+    <com.cnsunrun.common.widget.titlebar.TitleBar
+        android:id="@+id/title_bar"
+        style="@style/BackTitleBarStyle"
+        app:backgroundColor="@color/white"
+        app:bottomDividerHeight="1dp"
+        app:title="新消息通知"
+        app:titleColor="@color/black"
+        app:leftVisible="visible"
+        app:leftIcon="@drawable/back"
+        />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="@color/white">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="接受新消息通知"
+            android:layout_centerVertical="true"
+            android:paddingLeft="10dp"
+            android:textSize="15sp"
+            android:textColor="@color/text_color_333"
+            />
+
+        <com.cnsunrun.commonui.widget.SwitchButton.SwitchButton
+            android:id="@+id/sb_message_get"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            app:sb_checked="true"
+            app:sb_show_indicator="false"
+            />
+
+    </RelativeLayout>
+
+    <View
+       style="@style/divide_line_1px"/>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="@color/white">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="通知显示消息详情"
+            android:layout_centerVertical="true"
+            android:paddingLeft="10dp"
+            android:textSize="15sp"
+            android:textColor="@color/text_color_333"
+            />
+
+        <com.cnsunrun.commonui.widget.SwitchButton.SwitchButton
+            android:id="@+id/sb_message_show"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            app:sb_checked="true"
+            app:sb_show_indicator="false"
+            />
+
+    </RelativeLayout>
+
+    <View
+        style="@style/divide_line_1px"/>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="@color/white">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="声音"
+            android:layout_centerVertical="true"
+            android:paddingLeft="10dp"
+            android:textSize="15sp"
+            android:textColor="@color/text_color_333"
+            />
+
+        <com.cnsunrun.commonui.widget.SwitchButton.SwitchButton
+            android:id="@+id/sb_sound"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            app:sb_checked="true"
+            app:sb_show_indicator="false"
+            />
+
+    </RelativeLayout>
+
+    <View
+        style="@style/divide_line_1px"/>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="@color/white">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="震动"
+            android:layout_centerVertical="true"
+            android:paddingLeft="10dp"
+            android:textSize="15sp"
+            android:textColor="@color/text_color_333"
+            />
+
+        <com.cnsunrun.commonui.widget.SwitchButton.SwitchButton
+            android:id="@+id/sb_shake"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            app:sb_checked="true"
+            app:sb_show_indicator="false"
+            />
+
+    </RelativeLayout>
+
+    <View
+        style="@style/divide_line_1px"/>
+
+
+
+</LinearLayout>

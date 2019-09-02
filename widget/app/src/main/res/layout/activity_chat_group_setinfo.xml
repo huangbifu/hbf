@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/backgroud_color"
+    android:orientation="vertical">
+
+    <com.cnsunrun.commonui.widget.titlebar.TitleBar
+        android:id="@+id/titleBar"
+        style="@style/BackTitleBarStyle"
+        app:title="群组详情" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <com.cnsunrun.common.widget.BoxLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:orientation="vertical"
+
+            >
+
+            <com.cnsunrun.common.widget.BoxLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="vertical"
+                app:box_Padding="10">
+            <com.zhy.view.flowlayout.TagFlowLayout
+                android:layout_width="match_parent"
+                android:id="@+id/userInfos"
+                android:layout_height="wrap_content">
+
+            </com.zhy.view.flowlayout.TagFlowLayout>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:text="查看更多群成员>"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="5dp"
+                    android:id="@+id/txtShowAllPeople"
+                    android:textColor="@color/text3"
+                    android:layout_height="wrap_content" />
+            </com.cnsunrun.common.widget.BoxLayout>
+
+            <com.cnsunrun.common.widget.BoxLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:background="@color/white"
+                android:orientation="vertical"
+                >
+                <com.cnsunrun.common.widget.FormLabLayout
+                    android:id="@+id/itemGroupName"
+                    android:layout_width="match_parent"
+                    android:layout_height="44dp"
+                    app:lab_Txt="群名称"
+                    app:lab_RightIcon="@drawable/ic_item_right_next"
+                    app:lab_Content="花园小区宠物群"
+                    />
+                <View
+                    style="@style/limit_line"
+                    android:layout_marginLeft="5dp"
+                    />
+                <com.cnsunrun.common.widget.BoxLayout
+                    android:layout_width="match_parent"
+                    app:box_Padding="10 15 10 15"
+                    android:orientation="vertical"
+                    android:id="@+id/layAnnouncement"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:text="群公告"
+                        android:textColor="@color/text1"
+                        android:textSize="15sp"
+                        android:layout_height="wrap_content" />
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="5dp"
+                        android:layout_height="wrap_content">
+                        <TextView
+
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:text="温馨和谐文明真诚不欢迎广告!!!!!!"
+                            android:textColor="@color/text3"
+                            android:id="@+id/txtAnnouncement"
+                            android:maxLines="2"
+                            android:layout_marginRight="10dp"
+                            android:layout_height="wrap_content" />
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/ic_item_right_next"
+                            />
+                    </LinearLayout>
+
+                </com.cnsunrun.common.widget.BoxLayout>
+                </com.cnsunrun.common.widget.BoxLayout>
+
+            <com.cnsunrun.common.widget.FormLabLayout
+                android:id="@+id/itemMyGroupName"
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                app:lab_Txt="我的群名片"
+                android:background="@color/white"
+                android:layout_marginTop="5dp"
+                app:lab_RightIcon="@drawable/ic_item_right_next"
+                app:lab_Content="小颖子"
+                />
+            <com.cnsunrun.common.widget.BoxLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:background="@color/white"
+                android:orientation="vertical"
+                >
+
+                <com.cnsunrun.common.widget.FormLabLayout
+                    android:id="@+id/itemAllowNotify"
+                    android:layout_width="match_parent"
+                    android:layout_height="44dp"
+                    app:lab_Txt="红包提示音">
+
+                    <com.cnsunrun.common.widget.SwitchView
+                        android:id="@+id/toggleAllowNotify"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical|right"
+                        android:layout_marginRight="8dp"
+                        app:isOpened="true"
+                        />
+                </com.cnsunrun.common.widget.FormLabLayout>
+                <View
+                    style="@style/limit_line"
+                    android:layout_marginLeft="5dp"
+                    />
+                <com.cnsunrun.common.widget.FormLabLayout
+                    android:id="@+id/itemItemTop"
+                    android:layout_width="match_parent"
+                    android:layout_height="44dp"
+                    app:lab_Txt="会话置顶">
+
+                    <com.cnsunrun.common.widget.SwitchView
+                        android:id="@+id/toggleIsTop"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical|right"
+                        android:layout_marginRight="8dp"
+                        app:isOpened="true"
+                        />
+                </com.cnsunrun.common.widget.FormLabLayout>
+            </com.cnsunrun.common.widget.BoxLayout>
+            <com.cnsunrun.common.widget.BoxLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:background="@color/white"
+                android:orientation="vertical"
+                >
+                <com.cnsunrun.common.widget.FormLabLayout
+                    android:id="@+id/itemFindHistory"
+                    android:layout_width="match_parent"
+                    android:layout_height="44dp"
+                    app:lab_RightIcon="@drawable/ic_item_right_next"
+                    android:visibility="gone"
+                    app:lab_Txt="查找聊天记录" />
+                <View
+                    style="@style/limit_line"
+                    android:layout_marginLeft="5dp"
+                    />
+
+                <com.cnsunrun.common.widget.FormLabLayout
+                    android:id="@+id/itemClearHistory"
+                    android:layout_width="match_parent"
+                    android:layout_height="44dp"
+                    app:lab_Txt="清除聊天记录">
+
+                </com.cnsunrun.common.widget.FormLabLayout>
+            </com.cnsunrun.common.widget.BoxLayout>
+            <com.cnsunrun.common.widget.FormLabLayout
+                android:id="@+id/itemSetBackground"
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:background="@color/white"
+                android:layout_marginTop="5dp"
+                android:visibility="gone"
+                app:lab_RightIcon="@drawable/ic_item_right_next"
+                app:lab_Txt="设置当前聊天背景">
+
+            </com.cnsunrun.common.widget.FormLabLayout>
+            <com.cnsunrun.commonui.widget.roundwidget.QMUIRoundButton
+                style="@style/submitBtnR1"
+                android:id="@+id/btnExitGroup"
+                android:text="退出群聊"
+                android:layout_marginTop="15dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="15dp"
+                android:textSize="18sp"
+                />
+        </com.cnsunrun.common.widget.BoxLayout>
+    </ScrollView>
+
+</LinearLayout>

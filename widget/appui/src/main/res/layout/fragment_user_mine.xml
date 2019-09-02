@@ -1,0 +1,110 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/backgroud_color"
+    android:orientation="vertical"
+    tools:context="com.cnsunrun.commonui.fragment.UserMineFragment">
+
+    <com.cnsunrun.commonui.widget.titlebar.TitleBar
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/titlebar_height"
+        app:backgroundColor="@color/title_color"
+        app:bottomDividerHeight="0dp"
+        app:fitStatusBar="true"
+        app:rightText="设置"
+        app:rightTextColor="#fff"
+        app:rightVisible="visible" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/title_color">
+
+        <com.makeramen.roundedimageview.RoundedImageView
+            android:id="@+id/imgPersonIcon"
+            android:layout_width="72dp"
+            android:layout_height="72dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="10dp"
+            android:src="@mipmap/ic_launcher"
+            app:riv_border_color="#fff"
+            app:riv_border_width="2dp"
+            app:riv_oval="true" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_toRightOf="@id/imgPersonIcon"
+            android:gravity="center_vertical"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:lines="1"
+                android:maxEms="15"
+                android:text="尚软科技"
+                android:textColor="#fff"
+                android:textSize="18sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:lines="1"
+                android:text="百花幼儿园"
+                android:textColor="#FED3B6"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+        <ImageView
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_margin="5dp"
+            android:padding="5dp"
+            android:src="@mipmap/icon_back"
+            android:tint="#fff" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/stroke_top_and_bottom_line_drawable"
+        android:divider="@drawable/divider_inner_drawable"
+        android:orientation="vertical"
+        android:showDividers="middle">
+
+        <include layout="@layout/item_icon_text_more_view" />
+
+        <include layout="@layout/item_icon_text_more_view" />
+
+        <include layout="@layout/item_icon_text_more_view" />
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/stroke_top_and_bottom_line_drawable"
+        android:divider="@drawable/divider_inner_drawable"
+        android:orientation="vertical"
+        android:showDividers="middle">
+
+        <include layout="@layout/item_icon_text_more_view" />
+
+        <include layout="@layout/item_icon_text_more_view" />
+
+        <include layout="@layout/item_icon_text_more_view" />
+
+    </LinearLayout>
+
+
+</LinearLayout>

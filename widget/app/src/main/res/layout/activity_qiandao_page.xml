@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f8f8f8"
+    android:orientation="vertical">
+
+    <com.cnsunrun.common.widget.titlebar.TitleBar
+        android:id="@+id/titleBar"
+        style="@style/WhiteLeftTitleBarStyle"
+        app:backgroundColor="@color/color_fe481e"
+        app:bottomDivider="@color/color_fe481e"
+        app:bottomDividerHeight="0dp"
+        app:title="签到"
+        app:rightText="规则说明"
+        app:rightVisible="visible"
+        />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:background="@color/color_fe481e"
+        android:layout_height="110dp">
+
+        <LinearLayout
+            android:id="@+id/llMoney"
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="110dp"
+            android:orientation="vertical"
+            android:paddingLeft="@dimen/dp_10"
+            android:gravity="center_horizontal"
+            android:paddingTop="5dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="累计领取金额(元)"
+                android:textColor="@color/white"
+                android:layout_marginTop="15dp"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/tvMoney"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="0.00"
+                android:textColor="@color/white"
+                android:textSize="25sp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+        <Button
+            android:layout_width="120dp"
+            android:layout_height="43dp"
+            android:background="@drawable/shap_bg_qiandao"
+            android:text="点击签到"
+            android:id="@+id/btnQiandao"
+            android:layout_gravity="center"
+            />
+
+    </FrameLayout>
+ <LinearLayout
+     android:layout_width="match_parent"
+     android:orientation="horizontal"
+     android:background="#da3e1a"
+     android:layout_height="70dp">
+     <LinearLayout
+         android:layout_width="wrap_content"
+         android:orientation="vertical"
+         android:gravity="center"
+         android:padding="10dp"
+         android:layout_height="match_parent">
+         <TextView
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:text="已连续签到"
+             android:textColor="@color/white"
+             android:textSize="11sp" />
+
+         <TextView
+             android:id="@+id/tvTotalDay"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_marginTop="8dp"
+             android:text="1天"
+             android:textColor="@color/white"
+             android:textSize="15dp"
+             />
+     </LinearLayout>
+     <View
+         style="@style/vertical_limit_line"
+         android:layout_marginTop="15dp"
+         android:layout_marginBottom="15dp"
+         />
+     <LinearLayout
+         android:layout_width="0dp"
+         android:orientation="vertical"
+
+         android:layout_weight="1"
+         android:gravity="center_vertical"
+         android:layout_height="match_parent">
+         <android.support.v7.widget.RecyclerView
+             android:layout_width="match_parent"
+             android:id="@+id/rlvDate"
+             android:paddingLeft="10dp"
+             android:paddingRight="10dp"
+             android:clipToPadding="false"
+             android:clipChildren="false"
+             android:layout_height="wrap_content"/>
+     </LinearLayout>
+ </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:gravity="center_vertical"
+        android:layout_height="50dp">
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="领取明细"
+            android:textSize="17sp"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="查看更多>"
+            android:id="@+id/tvShowAll"
+            android:gravity="center_vertical"
+            android:textColor="@color/text_color_666"
+            android:textSize="14sp"
+            />
+    </LinearLayout>
+    <include layout="@layout/include_recyclerview_reflayout"/>
+</LinearLayout>

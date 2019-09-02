@@ -1,0 +1,68 @@
+<resources>
+<!--默认按钮样式-->
+    <style name="RoundBtnWrap" parent="CommonUITheme.RoundButton">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+    <style name="smallBtn" parent="@style/RoundBtnWrap">
+    </style>
+    <style name="smallBtnR1" parent="@style/RoundBtnWrap">
+        <item name="qmui_radius">@dimen/buttons_corner_radius1</item>
+    </style>
+    <style name="smallBtnR2" parent="@style/RoundBtnWrap">
+        <item name="qmui_radius">@dimen/buttons_corner_radius2</item>
+    </style>
+    <style name="smallBtnRC" parent="@style/RoundBtnWrap">
+        <item name="qmui_isRadiusAdjustBounds">true</item>
+    </style>
+    <style name="smallBtnBottomR1" parent="@style/RoundBtnWrap">
+        <item name="qmui_radiusBottomLeft">@dimen/buttons_corner_radius1</item>
+        <item name="qmui_radiusBottomRight">@dimen/buttons_corner_radius1</item>
+    </style>
+    <style name="smallBtnBottomR2" parent="@style/RoundBtnWrap">
+        <item name="qmui_radiusBottomLeft">@dimen/buttons_corner_radius2</item>
+        <item name="qmui_radiusBottomRight">@dimen/buttons_corner_radius2</item>
+    </style>
+
+    <style name="smallBtnTopR1" parent="@style/RoundBtnWrap">
+        <item name="qmui_radiusTopLeft">@dimen/buttons_corner_radius1</item>
+        <item name="qmui_radiusTopRight">@dimen/buttons_corner_radius1</item>
+    </style>
+    <style name="smallBtnTopR2" parent="@style/RoundBtnWrap">
+        <item name="qmui_radiusTopLeft">@dimen/buttons_corner_radius2</item>
+        <item name="qmui_radiusTopRight">@dimen/buttons_corner_radius2</item>
+    </style>
+
+    <style name="smallBtnBorder" parent="@style/RoundBtnWrap">
+        <item name="android:textColor">@color/main_button_color</item>
+        <item name="qmui_backgroundColor">@color/white</item>
+        <item name="qmui_borderColor">@color/main_button_color</item>
+        <item name="qmui_borderWidth">@dimen/btn_border_width</item>
+    </style>
+    <style name="smallBtnBorderR1" parent="@style/smallBtnBorder">
+        <item name="qmui_radius">@dimen/buttons_corner_radius1</item>
+    </style>
+    <style name="smallBtnBorderR2" parent="@style/smallBtnBorder">
+        <item name="qmui_radius">@dimen/buttons_corner_radius1</item>
+    </style>
+    <style name="smallBtnBorderRC" parent="@style/smallBtnBorder">
+        <item name="qmui_isRadiusAdjustBounds">true</item>
+    </style>
+    <style name="RoundBtnSubmit" parent="CommonUITheme.RoundButton">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/btn_height</item>
+    </style>
+    <style name="submitBtn" parent="@style/RoundBtnSubmit">
+    </style>
+
+    <style name="submitBtnRC" parent="@style/RoundBtnSubmit">
+        <item name="qmui_isRadiusAdjustBounds">true</item>
+    </style>
+
+    <style name="submitBtnR1" parent="@style/RoundBtnSubmit">
+        <item name="qmui_radius">@dimen/buttons_corner_radius1</item>
+    </style>
+    <style name="submitBtnR2" parent="@style/RoundBtnSubmit">
+        <item name="qmui_radius">@dimen/buttons_corner_radius2</item>
+    </style>
+</resources>

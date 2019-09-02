@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="toolbar" type="id">toolbar</item>
+    <item name="titleContainer" type="id">titleContainer</item>
+
+    <!-- dialog -->
+    <item name="qmui_dialog_edit_input" type="id"/>
+    <item name="qmui_dialog_edit_right_icon" type="id"/>
+</resources>

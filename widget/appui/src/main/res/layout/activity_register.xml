@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/backgroud_color"
+    android:orientation="vertical"
+    tools:context="com.cnsunrun.commonui.activity.RegisterActivity">
+
+    <com.cnsunrun.commonui.widget.titlebar.TitleBar
+        android:id="@+id/titleBar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/titlebar_height"
+        app:rightText="登录"
+        app:rightVisible="visible"
+        app:title="注册" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/stroke_top_and_bottom_line_drawable"
+        android:divider="@drawable/divider_inner_drawable"
+        android:orientation="vertical"
+        android:showDividers="middle">
+
+
+        <com.cnsunrun.commonui.widget.edittext.EditView
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:background="#fff"
+            app:hintText="请输入手机号"
+            app:inputType="number"
+            app:maxLength="11"
+            app:rightAction="clearAll"
+            app:rightImg="@mipmap/ic_launcher_round" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingRight="10dp">
+
+            <com.cnsunrun.commonui.widget.edittext.EditView
+                android:layout_width="0dp"
+                android:layout_height="44dp"
+                android:layout_weight="1"
+                android:background="#fff"
+                app:hintText="请输入验证码"
+                app:inputType="number"
+                app:maxLength="8" />
+
+            <com.cnsunrun.commonui.widget.button.RoundButton
+                android:layout_width="100dp"
+                android:layout_height="35dp"
+                android:layout_gravity="center_vertical"
+                android:clickable="true"
+                android:lines="1"
+                android:text="获取验证码"
+                android:textColor="#fff"
+                android:textSize="16sp"
+                app:btnCornerRadius="@dimen/buttons_corner_radius1"
+                app:btnSolidColor="@color/title_color" />
+        </LinearLayout>
+
+
+        <com.cnsunrun.commonui.widget.edittext.EditView
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:background="#fff"
+            app:hintText="请输入密码"
+            app:inputType="password"
+            app:maxLength="12"
+            app:rightAction="password"
+            app:rightImg="@mipmap/ic_launcher_round" />
+
+
+    </LinearLayout>
+
+
+    <com.cnsunrun.commonui.widget.button.RoundButton
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="20dp"
+        android:clickable="true"
+        android:text="确认"
+        android:textColor="#fff"
+        android:textSize="18sp"
+        app:btnCornerRadius="@dimen/buttons_corner_radius1"
+        app:btnSolidColor="@color/main_button_color" />
+
+
+</LinearLayout>

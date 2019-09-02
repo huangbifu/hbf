@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f8f8f8"
+    android:orientation="vertical">
+
+    <com.cnsunrun.common.widget.titlebar.TitleBar
+        android:id="@+id/titleBar"
+        style="@style/NewWhiteBackTitleBarStyle"
+        app:backgroundColor="@color/white"
+        app:bottomDividerHeight="1dp"
+        app:title="充值" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingBottom="12dp"
+        android:paddingLeft="@dimen/dp_10"
+        android:paddingTop="16dp"
+        android:text="收款信息"
+        android:textColor="@color/text_color_999"
+        android:textSize="12sp" />
+
+    <LinearLayout style="@style/LinearLayout_44dp">
+
+        <TextView
+            style="@style/textview_title"
+            android:text="收款人" />
+
+        <TextView
+            android:id="@+id/tvPayee"
+            style="@style/textview_content"
+            android:text="" />
+
+        <RelativeLayout
+            android:id="@+id/rlCopyName"
+            android:layout_width="30dp"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="复制"
+                android:textColor="@color/main_button_color"
+                android:textSize="14sp"/>
+
+        </RelativeLayout>
+    </LinearLayout>
+
+    <View style="@style/divide_line_1px_e9e9e9" />
+
+    <LinearLayout style="@style/LinearLayout_44dp">
+
+        <TextView
+            style="@style/textview_title"
+            android:text="开户行" />
+
+        <TextView
+            android:id="@+id/tvOpeningBank"
+            style="@style/textview_content"
+            android:text="" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:src="@drawable/btn_fuzhi_normal"
+            android:visibility="invisible" />
+    </LinearLayout>
+
+    <View style="@style/divide_line_1px_e9e9e9" />
+
+    <LinearLayout style="@style/LinearLayout_44dp">
+
+        <TextView
+            style="@style/textview_title"
+            android:text="账号" />
+
+        <TextView
+            android:id="@+id/tvBankNum"
+            style="@style/textview_content"
+            android:layout_width="278dp"
+            android:layout_height="wrap_content"
+            android:text="" />
+
+        <RelativeLayout
+            android:id="@+id/rlCopyBankNum"
+            android:layout_width="30dp"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="复制"
+                android:textColor="@color/main_button_color"
+                android:textSize="14sp" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingBottom="12dp"
+        android:paddingLeft="@dimen/dp_10"
+        android:paddingTop="16dp"
+        android:text="付款信息"
+        android:textColor="@color/text_color_999"
+        android:textSize="12sp" />
+
+    <LinearLayout style="@style/LinearLayout_44dp">
+
+        <TextView
+            style="@style/textview_title"
+            android:layout_width="75dp"
+            android:text="付款人姓名" />
+
+        <EditText
+            android:id="@+id/etUserName"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="26dp"
+            android:background="@null"
+            android:hint="输入付款人姓名"
+            android:maxLength="30"
+            android:textColor="@color/text_color_333"
+            android:textColorHint="#cccccc"
+            android:textSize="14sp" />
+    </LinearLayout>
+
+    <View style="@style/divide_line_1px_e9e9e9" />
+
+    <LinearLayout style="@style/LinearLayout_44dp">
+
+        <TextView
+            style="@style/textview_title"
+            android:layout_width="75dp"
+            android:text="付款金额" />
+
+        <EditText
+            android:id="@+id/etMoney"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="26dp"
+            android:layout_weight="1"
+            android:background="@null"
+            android:hint="输入付款金额"
+            android:imeActionId="@integer/rc_custom_service_evaluation_interval"
+            android:imeOptions="actionDone"
+            android:inputType="numberDecimal"
+            android:maxLength="10"
+            android:textColor="@color/text_color_333"
+            android:textColorHint="#cccccc"
+            android:textSize="14sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="元"
+            android:textColor="@color/text_color_999"
+            android:textSize="14sp" />
+    </LinearLayout>
+
+    <View style="@style/divide_line_1px_e9e9e9" />
+
+    <LinearLayout style="@style/LinearLayout_44dp">
+
+        <TextView
+            style="@style/textview_title"
+            android:layout_width="75dp"
+            android:text="付款备注" />
+
+        <EditText
+            android:id="@+id/etRemark"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="26dp"
+            android:layout_weight="1"
+            android:background="@null"
+            android:hint="输入备注信息"
+            android:maxLength="50"
+            android:textColor="@color/text_color_333"
+            android:textColorHint="#cccccc"
+            android:textSize="14sp" />
+    </LinearLayout>
+
+    <com.cnsunrun.commonui.widget.roundwidget.QMUIRoundButton
+        android:id="@+id/btnSubmit"
+        style="@style/submitBtnR1"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="20dp"
+        android:text="提交审核"
+        android:textSize="18sp"
+        app:qmui_backgroundColor="@drawable/submit_btn_bg_select_new" />
+</LinearLayout>

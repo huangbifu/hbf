@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/layRootView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:orientation="vertical">
+
+    <ImageView
+        android:id="@+id/imgChatBg"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:scaleType="centerCrop" />
+
+    <com.cnsunrun.commonui.widget.titlebar.TitleBar
+        android:id="@+id/titleBar"
+        style="@style/BackTitleBarStyle"
+        app:rightIcon="@drawable/ic_chats_more_btn_3x"
+        app:rightVisible="visible"
+        app:rightVisible2="visible"
+        app:title="昵称" />
+
+    <LinearLayout
+        android:id="@+id/layContent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/titleBar"
+        android:orientation="vertical">
+
+        <include layout="@layout/rc_layout_network_unavailable" />
+
+        <fragment
+            android:id="@+id/conversation"
+            android:name="com.cnsunrun.chat.fragment.CusConversationFragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </LinearLayout>
+
+    <View
+        android:id="@+id/layBottomDis"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:clickable="true"
+        android:visibility="gone" />
+
+    <View
+        style="@style/limit_line"
+        android:layout_above="@+id/layBottom" />
+
+    <LinearLayout
+        android:id="@+id/layBottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/white"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal"
+        android:paddingLeft="10dp"
+        android:paddingTop="5dp"
+        android:paddingRight="10dp"
+        android:paddingBottom="5dp">
+
+        <com.cnsunrun.commonui.widget.roundwidget.QMUIRoundButton
+            android:id="@+id/btnSendRedpack"
+            style="@style/submitBtnR1"
+            android:layout_marginRight="10dp"
+            android:layout_weight="1"
+            android:text="7包"
+            android:textColor="@color/text1"
+            app:qmui_backgroundColor="@color/white"
+            app:qmui_borderColor="@color/limit_line1"
+            app:qmui_borderWidth="1dp"
+            app:qmui_radius="5dp" />
+
+        <com.cnsunrun.commonui.widget.roundwidget.QMUIRoundButton
+            android:id="@+id/btnNineRedpack"
+            style="@style/submitBtnR1"
+            android:layout_marginRight="10dp"
+            android:layout_weight="1"
+            android:text="9包"
+            android:textColor="@color/text1"
+            app:qmui_backgroundColor="@color/white"
+            app:qmui_borderColor="@color/limit_line1"
+            app:qmui_borderWidth="1dp"
+            app:qmui_radius="5dp" />
+
+        <com.cnsunrun.commonui.widget.roundwidget.QMUIRoundButton
+            android:id="@+id/btnWelfareSendRedpack"
+            style="@style/submitBtnR1"
+            android:layout_marginRight="10dp"
+            android:layout_weight="1"
+            android:text="福利包"
+            android:textColor="@color/text1"
+            app:qmui_backgroundColor="@color/white"
+            app:qmui_borderColor="@color/limit_line1"
+            app:qmui_borderWidth="1dp"
+            app:qmui_radius="5dp" />
+
+        <com.cnsunrun.commonui.widget.roundwidget.QMUIRoundButton
+            android:id="@+id/btnShowBalance"
+            style="@style/submitBtnR1"
+            android:layout_weight="1"
+            android:text="余额"
+            android:textColor="@color/text1"
+            app:qmui_backgroundColor="@color/white"
+            app:qmui_borderColor="@color/limit_line1"
+            app:qmui_borderWidth="1dp"
+            app:qmui_radius="5dp" />
+    </LinearLayout>
+</RelativeLayout>

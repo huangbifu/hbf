@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/white_clickable_selector"
+    android:orientation="vertical">
+
+    <com.cnsunrun.common.widget.BoxLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        app:box_Padding="10 13 10 12">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/imgUserIcon"
+            android:layout_width="53dp"
+            android:layout_height="53dp"
+            android:layout_marginRight="10dp"
+            android:src="@color/text5"
+            android:scaleType="centerCrop" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/txtUserName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:text="温柔的风穿堂过"
+                android:textColor="@color/text1"
+                android:textSize="17sp" />
+            <TextView
+                android:id="@+id/txtInfo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:visibility="gone"
+                android:text="11"
+                android:textColor="@color/text4"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+        <com.cnsunrun.commonui.widget.roundwidget.QMUIRoundButton
+            android:id="@+id/btnReject"
+            style="@style/smallBtnRC"
+            android:layout_marginRight="10dp"
+            android:text="拒绝"
+            app:qmui_backgroundColor="#fe481e"
+            />
+
+        <com.cnsunrun.commonui.widget.roundwidget.QMUIRoundButton
+            android:id="@+id/btnAgree"
+            style="@style/smallBtnRC"
+            android:text="同意"
+            app:qmui_backgroundColor="#6db05d"
+
+            />
+
+        <com.cnsunrun.commonui.widget.roundwidget.QMUIRoundButton
+            android:id="@+id/txtAgreed"
+            android:text="已同意"
+            style="@style/smallBtnRC"
+            android:visibility="gone"
+            app:qmui_backgroundColor="@color/text4"
+            />
+    </com.cnsunrun.common.widget.BoxLayout>
+
+
+    <View
+        style="@style/limit_line"
+        android:layout_marginLeft="10dp" />
+</LinearLayout>

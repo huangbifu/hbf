@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="60dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/white">
+    <com.makeramen.roundedimageview.RoundedImageView
+        android:id="@+id/imgRedDot"
+        android:layout_width="7dp"
+        android:layout_height="7dp"
+        android:layout_gravity="center_vertical"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="20dp"
+        android:layout_alignParentLeft="true"
+        app:riv_corner_radius="5dp"
+        android:visibility="gone"
+        android:src="@color/wrong_orange_color_"
+        />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_toRightOf="@+id/imgRedDot"
+        android:gravity="center_vertical"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_message_title"
+            style="@style/textView_style_14sp"
+            android:singleLine="true"
+            android:ellipsize="end"
+            android:textColor="@color/text_color_333" />
+
+        <TextView
+            style="@style/textView_style_14sp"
+            android:layout_marginTop="5dp"
+            android:id="@+id/tv_message_time"
+            android:textColor="@color/text_color_999"
+            android:textSize="11sp" />
+
+
+    </LinearLayout>
+
+
+    <View
+        style="@style/limit_line"
+        android:layout_marginLeft="10dp"
+        android:layout_alignParentBottom="true" />
+
+</RelativeLayout>

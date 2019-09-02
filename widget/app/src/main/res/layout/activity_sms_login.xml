@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/com_dark_bg_color"
+    android:orientation="vertical">
+
+    <com.cnsunrun.common.widget.titlebar.TitleBar
+        android:id="@+id/title_bar"
+        style="@style/BackTitleBarStyle"
+        app:backgroundColor="@color/white"
+        app:bottomDividerHeight="0dp"
+        app:title="登录"
+        app:titleColor="@color/black"
+        app:leftVisible="visible"
+        app:leftIcon="@drawable/back"
+        app:rightTextColor="@color/black"
+        />
+
+    <ImageView
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_marginTop="30dp"
+        android:layout_gravity="center_horizontal"
+        android:background="@mipmap/ic_launcher"/>
+
+    <LinearLayout
+        android:id="@+id/layout_account"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:orientation="horizontal"
+        android:background="@drawable/shape_login_bg"
+        android:gravity="center_vertical"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="10dp"
+        >
+        <TextView
+            android:id="@+id/tv_account"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="手机号"
+            android:textSize="15sp"
+            android:textColor="#ff5a00"
+            android:layout_marginLeft="10dp"
+            />
+
+        <EditText
+            android:id="@+id/edit_account"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="请输入手机号"
+            android:inputType="number"
+            android:background="@null"
+            android:layout_marginRight="10dp"
+            android:layout_marginLeft="5dp"
+            android:maxLength="11"
+            android:textColorHint="@color/text_color_999"
+            android:textSize="15sp" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/layout_pic_code"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="@drawable/shape_login_bg2"
+        android:gravity="center_vertical"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="10dp"
+        >
+        <TextView
+            android:id="@+id/tv_pic_code"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="图形验证码"
+            android:textSize="15sp"
+            android:textColor="@color/text_color_333"
+            android:layout_marginLeft="10dp"
+            android:layout_centerVertical="true"
+            />
+
+        <EditText
+            android:id="@+id/edit_pic_code"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="请输入图形验证码"
+            android:background="@null"
+            android:layout_marginRight="10dp"
+            android:layout_marginLeft="5dp"
+            android:layout_toRightOf="@+id/tv_pic_code"
+            android:textColorHint="@color/text_color_999"
+            android:layout_centerVertical="true"
+            android:digits="0123456789abcdefghigklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
+            android:textSize="15sp" />
+
+        <ImageView
+            android:id="@+id/iv_pic_code"
+            android:layout_width="100dp"
+            android:layout_height="35dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="5dp"
+            />
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/layout_verification_code"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="@drawable/shape_login_bg2"
+        android:gravity="center_vertical"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="10dp"
+        >
+
+        <TextView
+            android:id="@+id/tv_verification_code"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="验证码"
+            android:textSize="15sp"
+            android:textColor="@color/text_color_666"
+            android:layout_marginLeft="10dp"
+            android:layout_centerVertical="true"
+            />
+
+        <EditText
+            android:id="@+id/edit_verification_code"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:background="@null"
+            android:layout_marginStart="10dp"
+            android:hint="请输入验证码"
+            android:layout_toRightOf="@id/tv_verification_code"
+            android:inputType="number"
+            android:layout_toLeftOf="@id/get_verification_code"
+            android:textColorHint="@color/text_color_999"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/get_verification_code"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="10dp"
+            android:layout_alignParentEnd="true"
+            android:text="获取验证码"
+            android:textColor="@color/com_color"
+            android:autoLink="all"
+            android:textSize="15sp" />
+
+
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tv_login"
+        style="@style/bottom_button_style"
+        android:layout_marginTop="20dp"
+        android:text="登录" />
+
+    <TextView
+        android:id="@+id/tv_password_login"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:padding="10dp"
+        android:text="密码登录"
+        android:textColor="@color/com_color"
+        android:textSize="16dp" />
+
+
+
+
+
+
+
+
+
+
+
+</LinearLayout>

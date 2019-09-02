@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_mail_list"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/backgroud_color"
+    android:orientation="vertical">
+
+
+    <com.cnsunrun.commonui.widget.titlebar.TitleBar
+        android:id="@+id/titleBar"
+        style="@style/WhiteBackTitleBarStyle"
+        app:backgroundColor="@color/orange_color_f97823"
+        app:bottomDividerHeight="0dp"
+        app:rightText="编辑"
+        app:rightTextColor="@color/white"
+        app:rightVisible="visible"
+        app:title="信箱"
+        app:titleColor="@color/white" />
+
+    <include layout="@layout/include_recyclerview_reflayout" />
+
+</LinearLayout>
